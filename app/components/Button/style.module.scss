@@ -1,0 +1,12 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+// החלת ה-mixin החדש על מחלקת הכפתור
+.button {
+  @include button-premium;
+}
+
+// ניתן להוסיף כאן וריאציות בעתיד, לדוגמה:
+// .secondary {
+//   ...
+// } 

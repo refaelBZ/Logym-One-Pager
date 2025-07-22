@@ -1,0 +1,129 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+
+// .hero {  margin-top: -$header-height;
+//     z-index: -100;
+// }
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/Hero.webp');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  margin-top: -$header-height;
+  @include ken-burns-effect;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26,26,26,0.68); // כהות קלה מעל התמונה
+  z-index: 1;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: $dark-gray;
+  padding: 64px 0 48px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 70vh;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 550px;
+}
+
+.mockupWrapper {
+  width: 450px;
+  height: auto;
+  @include float-effect(6s);
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: $font-weight-bold;
+  color: white;
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: $font-size-lg;
+  color: white;
+  font-weight: $font-weight-normal;
+  margin-bottom: 12px;
+  line-height: $line-height-normal;
+}
+
+.description {
+  font-size: $font-size-base;
+  color: $text-color;
+  font-weight: $font-weight-light;
+  margin-bottom: 32px;
+  line-height: $line-height-relaxed;
+  max-width: 450px;
+}
+
+.visualPlaceholder {
+  width: 320px;
+  height: 200px;
+  background: $background-color;
+  border-radius: 15px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (min-width: 992px) {
+  .title {
+    font-size: 3.8rem;
+  }
+} 
+
+@media (max-width: 768px) {
+
+    .heroContent{
+        width: auto;
+        padding: 20px
+    }
+}

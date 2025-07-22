@@ -1,0 +1,324 @@
+
+@mixin page {
+    padding: 20px;
+    display: flex;
+    height: calc(100vh - 79px);
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    background-color: $background-color;
+  }
+  
+  @mixin layout-padding {
+    padding: 20px;
+  }
+  
+  @mixin card-style {
+    background-color: $dark-gray;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    border: 1px solid $border-color;
+
+  }
+  
+  @mixin border-card-style {
+    border: 1px solid $border-color;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  @mixin button-style($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-normal;
+    cursor: pointer;
+    text-align: center;
+  
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+// === PREMIUM BUTTON MIXIN (V2) ===
+@mixin button-premium {
+  // בסיס וטיפוגרפיה
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: $font-weight-bold;
+  color: $background-color;
+  
+  // עיצוב ומידות
+  padding: 18px 48px;
+  border-radius: 12px;
+  border: 1px solid transparent; // הכנה לאנימציית המסגרת
+  // רקע וצל
+  background: linear-gradient(45deg, lighten($main-color, 5%), $main-color);
+  box-shadow: 0px 8px 30px rgba($main-color, 0.35);
+  // אנימציות ואינטראקציות
+  transition: all 0.3s ease; // Transition כללי יותר
+  // animation: pulse-glow-mixin 2.5s infinite ease-in-out;
+  &:hover {
+    // שינוי הרקע והטקסט ב-hover
+    // background: $background-color;
+    // color: $main-color;
+    // transition: all 0.1s ease;
+    // // transform: scale(1.05) translateY(-2px);
+    box-shadow: none; // מסירים את הצל הרגיל
+
+    // // הפעלת אנימציית המסגרת
+    // animation: borderRotateHover 2s infinite linear;
+
+  }
+
+  &:active {
+    transform: scale(0.98); // אפקט לחיצה
+  }
+}
+
+// אנימציית המסגרת המסתובבת
+@keyframes borderRotateHover {
+  0% { border-image-source: linear-gradient(0deg, transparent 20%, $main-color 50%, transparent 80%); border-image-slice: 1; }
+  25% { border-image-source: linear-gradient(90deg, transparent 20%, $main-color 50%, transparent 80%); border-image-slice: 1; }
+  50% { border-image-source: linear-gradient(180deg, transparent 20%, $main-color 50%, transparent 80%); border-image-slice: 1; }
+  75% { border-image-source: linear-gradient(270deg, transparent 20%, $main-color 50%, transparent 80%); border-image-slice: 1; }
+  100% { border-image-source: linear-gradient(360deg, transparent 20%, $main-color 50%, transparent 80%); border-image-slice: 1; }
+}
+
+// נגדיר את אנימציית הפעימה כאן כדי שלא תהיה משוכפלת
+@keyframes pulse-glow-mixin {
+  0% {
+    box-shadow: 0px 8px 30px rgba($main-color, 0.3);
+  }
+  50% {
+    box-shadow: 0px 8px 45px rgba($main-color, 0.45);
+  }
+  100% {
+    box-shadow: 0px 8px 30px rgba($main-color, 0.3);
+  }
+}
+  
+  @mixin text-center {
+    text-align: center;
+  }
+  
+  @mixin text-highlight {
+    color: #ff0;
+    font-weight: $font-weight-bold;
+  }
+  
+  @mixin input {
+    border: 1px solid $border-color;
+    border-radius: 15px;
+    background-color: $dark-gray;
+    padding: 15px 30px;
+    font-size: $font-size-base;
+    line-height: $line-height-normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: $text-color;
+  }
+  
+  @mixin label {
+    color: white;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-normal;
+  }
+  
+  @mixin menuItem {
+    border: 1px solid $border-color;
+    border-radius: 15px;
+    background-color: $dark-gray;
+    padding: 5px;
+    font-size: $font-size-base;
+    line-height: $line-height-normal;
+    font-weight: $font-weight-light;
+    color: $text-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  @mixin text {
+    font-size: $font-size-sm;
+    color: $text-color;
+    font-weight: $font-weight-light;
+    line-height: $line-height-relaxed;
+    align-items: start;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @mixin pageName {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-tight;
+    padding-top: 20px;
+    color: white;
+    text-align: start;
+  }
+
+// === ANIMATION MIXINS ===
+// Motion with Intent - כל תנועה עם מטרה ברורה
+
+// מצב התחלתי לאלמנטים שיכנסו באנימציה
+@mixin animate-prepare {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+// אנימציה בסיסית - Fade-in-Up
+@mixin animate-in($delay: 0s) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: $delay;
+}
+
+// אנימציה מדורגת (Staggered) - לרכיבים מרובים
+@mixin animate-staggered($index, $base-delay: 0.1s) {
+  @include animate-prepare;
+  transition-delay: #{$index * $base-delay};
+}
+
+// כניסה מהצד (Slide-in)
+@mixin animate-slide-prepare($direction: left) {
+  opacity: 0;
+  @if $direction == left {
+    transform: translateX(-30px);
+  } @else if $direction == right {
+    transform: translateX(30px);
+  } @else if $direction == up {
+    transform: translateY(30px);
+  } @else if $direction == down {
+    transform: translateY(-30px);
+  }
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+@mixin animate-slide-in($delay: 0s) {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-delay: $delay;
+}
+
+// אנימציית Scale (גדילה)
+@mixin animate-scale-prepare {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+@mixin animate-scale-in($delay: 0s) {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: $delay;
+}
+
+// Ken Burns (לתמונות רקע)
+@mixin ken-burns-effect {
+  transform: scale(1.05);
+  transition: transform 15s ease-out;
+  
+  &.ken-burns-active {
+    transform: scale(1);
+  }
+}
+
+// ציור קו (Timeline)
+@mixin timeline-draw-prepare {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 1.5s ease-out;
+}
+
+@mixin timeline-draw-active {
+  transform: scaleY(1);
+}
+
+// פעימה (Pulse) לכפתורים
+@mixin pulse-effect($color: $main-color, $intensity: 0.35) {
+  animation: pulse-glow 2s infinite ease-in-out;
+  
+  @keyframes pulse-glow {
+    0% { box-shadow: 0px 8px 30px rgba($color, $intensity); }
+    50% { box-shadow: 0px 8px 45px rgba($color, $intensity + 0.15); }
+    100% { box-shadow: 0px 8px 30px rgba($color, $intensity); }
+  }
+  
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+// ריחוף (Float) למוקאפים
+@mixin float-effect($duration: 6s) {
+  animation: float $duration ease-in-out infinite;
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+}
+
+// מחלקות עזר לשימוש ב-JavaScript
+.animate-on-scroll {
+  @include animate-prepare;
+  
+  &.animate-in {
+    @include animate-in;
+  }
+}
+
+.animate-slide-left {
+  @include animate-slide-prepare(left);
+  
+  &.animate-in {
+    @include animate-slide-in;
+  }
+}
+
+.animate-slide-right {
+  @include animate-slide-prepare(right);
+  
+  &.animate-in {
+    @include animate-slide-in;
+  }
+}
+
+.animate-scale {
+  @include animate-scale-prepare;
+  
+  &.animate-in {
+    @include animate-scale-in;
+  }
+}
+
+.timeline-line {
+  @include timeline-draw-prepare;
+  
+  &.animate-in {
+    @include timeline-draw-active;
+  }
+}

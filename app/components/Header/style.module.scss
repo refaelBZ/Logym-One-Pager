@@ -1,0 +1,45 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  height: 64px;
+//   position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+//   transition: background-color 0.3s ease-in-out;
+}
+
+// .header.scrolled {
+//   background: rgba(36, 36, 36, 0.85); // רקע כהה שקוף מעט
+//   backdrop-filter: blur(8px);
+//   -webkit-backdrop-filter: blur(8px);
+//   border-bottom: 1px solid $border-color;
+//   border-bottom-left-radius: 15px;
+//   border-bottom-right-radius: 15px;
+// }
+
+.logo {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+// הוסף התאמות קטנות לכפתור ב-Header
+.headerButton {
+  padding: 10px 24px;
+  font-size: $font-size-base;
+  box-shadow: 0px 4px 15px rgba($main-color, 0.2);
+} 

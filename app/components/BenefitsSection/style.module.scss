@@ -1,0 +1,91 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.benefitsSection {
+  background: $background-color;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: $font-weight-bold;
+  color: white;
+}
+
+.benefitsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.benefitRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  &.reversed {
+    flex-direction: row-reverse;
+  }
+}
+
+.textContainer {
+  flex: 1;
+  @include card-style;
+}
+
+.iconContainer {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba($main-color, 0.08) 0%, rgba($main-color, 0) 70%);
+  svg {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.benefitTitle {
+  font-size: 1.8rem;
+  font-weight: $font-weight-bold;
+  color: $main-color;
+  margin: 0
+//   margin-bottom: 16px;
+}
+
+.benefitText {
+  font-size: $font-size-base;
+  color: $text-color;
+  line-height: $line-height-relaxed;
+}
+
+@media (max-width: 768px) {
+  .benefitsSection {
+    padding: 80px 20px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .benefitsContainer {
+    gap: 80px;
+  }
+  .benefitRow, .benefitRow.reversed {
+    flex-direction: column;
+    text-align: center;
+    .iconContainer {
+      margin-bottom: 24px;
+    }
+  }
+} 
