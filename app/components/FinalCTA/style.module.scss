@@ -45,8 +45,7 @@
 }
 
 .title {
-  font-size: 3rem;
-  font-weight: $font-weight-bold;
+  @include headingTitle;
   color: white;
   margin-bottom: 24px;
   line-height: $line-height-tight;

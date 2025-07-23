@@ -1,0 +1,67 @@
+@import "../../../styles/_vars.scss";
+@import "../../../styles/_mixins.scss";
+
+// הגדרות כלליות לסקשן
+.transformationSection {
+  background: $main-color;
+  padding: 120px 20px;
+}
+
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 650px;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: $font-weight-bold;
+  color: $background-color;
+}
+
+.description {
+  font-size: $font-size-base;
+  color: darken($main-color, 50%);
+}
+
+.animationCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: 695px;
+}
+
+.phoneMockup {
+  width: 100%;
+  height: 100%;
+  background: #1A1A1A;
+  border-radius: 36px;
+  border: 8px solid #000;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+  // ודא שהרכיב הפנימי ממלא את המוקאפ
+  & > div {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.chaosElement{
+  color: black;
+  font-size:50px;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

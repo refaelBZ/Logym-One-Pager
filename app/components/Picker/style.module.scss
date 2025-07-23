@@ -1,0 +1,60 @@
+// @import '../../../styles/_mixins.scss';
+
+// .numb {
+//   min-width: 20px;
+//   font-size: 30px;
+//   color: white;
+//   display: flex;
+//   flex-direction: column;
+//   font-weight: $font-weight-medium;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 15px;
+
+//   .prevValue,
+//   .nextValue {
+//     opacity: 0.5;
+//     font-size: $font-size-lg;
+//   }
+
+//   .currentValue {
+//     font-size: 30px;
+//     font-weight: $font-weight-medium;
+//     color: white;
+//   }
+
+//   .pickerTitle {
+//     font-size: $font-size-sm;
+//     font-weight: $font-weight-light;
+//     color: $text-color;
+//     margin-top: 5px;
+//   }
+// }
+
+// @keyframes slideUp {
+//   0% {
+//     transform: translateY(100%);
+//   }
+
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
+
+// @keyframes slideDown {
+//   0% {
+//     transform: translateY(-100%);
+//   }
+
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
+
+// .slideUp {
+//   animation: slideUp 0.3s ease-in-out;
+// }
+
+// .slideDown {
+//   animation: slideDown 0.3s ease-in-out;
+// }

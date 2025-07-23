@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.scss";
 import Hero from "./components/Hero";
 import ProblemSection from "./components/ProblemSection";
@@ -6,6 +5,8 @@ import SolutionSection from "./components/SolutionSection";
 import BenefitsSection from "./components/BenefitsSection";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
+import TransformationSection from "./components/TransformationSection/Index";
+import Workout from "./components/Workout";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <ProblemSection />
       <SolutionSection />
+      {/* <TransformationSection /> */}
       <BenefitsSection />
       <FinalCTA />
       <Footer />

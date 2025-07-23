@@ -15,8 +15,7 @@
 }
 
 .title {
-  font-size: 2.8rem;
-  font-weight: $font-weight-bold;
+  @include subHeadingTitle;
   color: white;
 }
 
@@ -41,6 +40,7 @@
 .textContainer {
   flex: 1;
   @include card-style;
+
 }
 
 .iconContainer {
@@ -58,11 +58,9 @@
 }
 
 .benefitTitle {
-  font-size: 1.8rem;
-  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-normal;
   color: $main-color;
-  margin: 0
-//   margin-bottom: 16px;
 }
 
 .benefitText {

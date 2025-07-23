@@ -32,6 +32,7 @@ export default function ProblemSection() {
 
   return (
     <section className={styles.problemSection}>
+      <div className={styles.backgroundVisual}></div>
       <h2 className={`${styles.sectionTitle} animate-on-scroll`} ref={titleRef}>
         That feeling of being stuck? It's real.
       </h2>
