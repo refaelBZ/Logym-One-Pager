@@ -4,35 +4,34 @@ import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const steps = [
   {
-    title: "בחר תוכנית",
-    desc: "בחר מתוכניות האימון המוכנות או צור אחת משלך.",
+    title: "Choose Your Plan",
+    desc: "Select from ready-made workout plans or create your own from scratch.",
     img: "/mockup-step1.png"
   },
   {
-    title: "התחל להתאמן",
-    desc: "כל תרגיל, כל סט, הכל מונחה וברור.",
+    title: "Start Your Workout",
+    desc: "Every exercise, every set—guided, clear, and focused.",
     img: "/mockup-step2.png"
   },
   {
-    title: "תיעוד בשניות, לא דקות",
-    desc: "זה הקסם. הממשק המהפכני שלנו מאפשר לך לתעד משקל וחזרות בין סטים, בלי להרוס את קצב האימון.",
+    title: "Log data in seconds, not minutes.",
+    desc: "This is our magic. Our revolutionary interface lets you log weight and reps between sets, without breaking your rhythm.",
     img: "/mockup-step3.png"
   }
 ];
 
 export default function SolutionSection() {
   const introRef = useScrollAnimation({ threshold: 0.4 });
-  const timelineRef = useScrollAnimation({ threshold: 0.2, staggerDelay: 300 }); // Delay for rising graph effect
+  const timelineRef = useScrollAnimation({ threshold: 0.2, staggerDelay: 300 });
 
   return (
     <section className={styles.solutionSection}>
       <div className={`${styles.intro} animate-on-scroll`} ref={introRef}>
-        <h2 className={styles.title}>להתאמן חכם יותר. פשוט יותר.</h2>
+        <h2 className={styles.title}>Train smarter. And simpler.</h2>
         <p className={styles.description}>
-          פיתחנו זרימת עבודה פשוטה בשלושה שלבים שהופכת את מעקב האימונים לחלק טבעי ונטול מאמץ מהשגרה שלך.
+          We designed a 3-step workflow that makes tracking a seamless, effortless part of your routine.
         </p>
       </div>
-      
       <div className={styles.graphContainer} ref={timelineRef}>
         {steps.map((step, idx) => (
           <div className={`${styles.stepNode} animate-on-scroll`} data-stagger={idx} key={idx}>

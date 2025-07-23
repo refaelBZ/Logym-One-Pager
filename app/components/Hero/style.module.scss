@@ -17,7 +17,8 @@
   z-index: 0;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
-  margin-top: -$header-height;
+  /* בוטל margin-top כדי למנוע חריגה מה-Header */
+  /* margin-top: -$header-height; */
   @include ken-burns-effect;
 }
 
@@ -29,21 +30,19 @@
   height: 100%;
   background: rgba(26,26,26,0.68); // כהות קלה מעל התמונה
   z-index: 1;
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
 }
 
 .hero {
   position: relative;
   overflow: hidden;
   background: $dark-gray;
-  padding: 64px 0 48px 0;
+  /* padding: 64px 0 48px 0; -> padding פנימי עובר ל-heroContent */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  min-height: 70vh;
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
+  flex-direction: column;
+  min-height: 480px; /* גובה מינימלי אחיד לכל ה-Hero */
+
 }
 
 .heroContent {
@@ -56,7 +55,8 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 64px 48px 48px 48px; /* padding פנימי במקום ב-hero */
+  min-height: 480px; /* תואם ל-hero */
 }
 
 .textWrapper {
@@ -106,6 +106,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.highlight {
+  color: $main-color;
 }
 
 @keyframes float {

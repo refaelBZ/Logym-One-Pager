@@ -58,13 +58,14 @@
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 1.25rem;
-  font-weight: $font-weight-bold;
+  // display: inline-block;
+  // font-size: 1.25rem;
+  font-weight: $font-weight-medium;
   color: $background-color;
   
   // עיצוב ומידות
-  padding: 18px 48px;
+  padding: 16px 48px;
+  // height: 48px;
   border-radius: 12px;
   border: 1px solid transparent; // הכנה לאנימציית המסגרת
   // רקע וצל

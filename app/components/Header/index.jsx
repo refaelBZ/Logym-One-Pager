@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import styles from "./style.module.scss";
-import Button from "../Button"; // ייבוא רכיב הכפתור החדש
+import Button from "../Button";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +26,7 @@ export default function Header() {
       <div className={styles.logo}>Logym</div>
       <nav className={styles.nav}>
         <Button href="#" className={styles.headerButton}>
-          להתחיל באפליקציה
+          Start Progressing for Free
         </Button>
       </nav>
     </header>

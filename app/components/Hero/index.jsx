@@ -2,6 +2,7 @@
 import styles from "./style.module.scss";
 import { useImmediateAnimation } from "../../hooks/useScrollAnimation";
 import Button from "../Button"; // ייבוא רכיב הכפתור החדש
+import Header from "../Header";
 
 export default function Hero() {
   const textRef = useImmediateAnimation(300);
@@ -10,19 +11,20 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={`${styles.bgImage} ken-burns`} />
       <div className={styles.overlay} />
+      <Header />
       <div className={styles.heroContent}>
         <div className={styles.textWrapper} ref={textRef}>
           <h1 className={`${styles.title} animate-on-scroll`} data-stagger="0">
-            די לסמן וי. הזמן לראות תוצאות.
+            STOP CHECKING BOXES. <span className={styles.highlight}>START SEEING RESULTS.</span>
           </h1>
           <h2 className={`${styles.subtitle} animate-on-scroll`} data-stagger="1">
-            Logym היא אפליקציית המעקב היחידה עם ממשק מהפכני למעקב אימונים בשניות.
+            Logym is the only fitness app with a revolutionary interface for logging workouts in seconds.
           </h2>
           <p className={`${styles.description} animate-on-scroll`} data-stagger="2">
-            הכל כדי שתוכל להתמקד במה שחשוב באמת - ההתקדמות שלך.
+            Everything you need to focus on what truly matters – your progress.
           </p>
           <Button className="animate-on-scroll" data-stagger="3">
-            להתחיל להתקדם בחינם
+            Start Progressing for Free
           </Button>
         </div>
         <div className={`${styles.mockupWrapper} animate-slide-right`}>
