@@ -48,11 +48,11 @@
 
 .cards {
   display: flex;
-  gap: 32px;
+  gap: 40px;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1100px;
+  // max-width: 1100px;
   position: relative;
   z-index: 2;
 }
@@ -60,11 +60,21 @@
 .card {
   @include card-style;
   border: 1px solid $border-color;
-  width: 300px;
+  width: 350px;
   // height: 200px;
 //   flex: 1 1 280px;
   text-align: center;
   padding: 30px;
+  transition: all 0.3s ease;
+  &:hover{
+    cursor: pointer;
+    .cardTitle{
+      color: $main-color;
+    }
+    .cardText{
+      color: white;
+    }
+  }
 }
 
 .icon {
