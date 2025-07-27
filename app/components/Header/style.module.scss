@@ -1,11 +1,11 @@
-@import "../../../styles/vars";
-@import "../../../styles/mixins";
+@import "../../../styles/_vars";
+@import "../../../styles/_mixins";
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 0 20px;
   height: 64px;
   width: 100%;
 //   position: sticky;
@@ -26,17 +26,17 @@
 // }
 
 .logo {
-  font-size: $font-size-xl;
-  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-normal;
   color: white;
   letter-spacing: 1px;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
+// .nav {
+//   display: flex;
+//   align-items: center;
+//   gap: 24px;
+// }
 
 // הוסף התאמות קטנות לכפתור ב-Header
 .headerButton {

@@ -7,15 +7,43 @@
   flex-direction: column;
   align-items: center;
   background-color: $background-color;
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundVisual {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  background-image: url('/Hero.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  filter: blur(20px);
+}
+
+.problemSection::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(26,26,26,0) 0%, rgba(26,26,26,0.8) 100%);
+  z-index: 1;
 }
 
 .sectionTitle {
-  font-size: 2.2rem;
-  font-weight: $font-weight-bold;
+  @include subHeadingTitle;
   color: white;
   margin-bottom: 56px;
   text-align: center;
   max-width: 600px;
+  position: relative;
+  z-index: 2;
 }
 
 .cards {
@@ -25,23 +53,18 @@
   flex-wrap: wrap;
   width: 100%;
   max-width: 1100px;
+  position: relative;
+  z-index: 2;
 }
 
 .card {
   @include card-style;
   border: 1px solid $border-color;
-  width: 280px;
-  height: 200px;
+  width: 300px;
+  // height: 200px;
 //   flex: 1 1 280px;
   text-align: center;
   padding: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  &:hover {
-    // transform: translateY(-8px);
-    // box-shadow: 0px 10px 30px rgba($main-color, 0.1);
-    box-shadow: 0px 8px 30px rgba($main-color, 0.35);
-
-  }
 }
 
 .icon {
@@ -53,7 +76,7 @@
 
 .cardTitle {
   font-size: $font-size-lg;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-normal;
   color: white;
   margin-bottom: 12px;
 }

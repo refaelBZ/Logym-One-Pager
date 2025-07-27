@@ -25,9 +25,7 @@ export default function Header() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.logo}>Logym</div>
       <nav className={styles.nav}>
-        <Button href="#" className={styles.headerButton}>
-          Start Progressing for Free
-        </Button>
+
       </nav>
     </header>
   );

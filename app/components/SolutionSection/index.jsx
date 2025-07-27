@@ -4,18 +4,18 @@ import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const steps = [
   {
-    title: "Choose Your Plan",
+    title: "Choose Your Workout",
     desc: "Select from ready-made workout plans or create your own from scratch.",
     img: "/mockup-step1.png"
   },
   {
-    title: "Start Your Workout",
-    desc: "Every exercise, every set—guided, clear, and focused.",
+    title: "Enter Your Data",
+    desc: "Log weight and reps between sets in seconds, without breaking your rhythm.",
     img: "/mockup-step2.png"
   },
   {
-    title: "Log data in seconds, not minutes.",
-    desc: "This is our magic. Our revolutionary interface lets you log weight and reps between sets, without breaking your rhythm.",
+    title: "See Your Results",
+    desc: "Track your progress visually and watch your hard work translate into real results.",
     img: "/mockup-step3.png"
   }
 ];
@@ -40,8 +40,10 @@ export default function SolutionSection() {
             </div>
             <div className={styles.content}>
               <div className={styles.stepNumber}>{idx + 1}</div>
-              <h3 className={styles.stepTitle}>{step.title}</h3>
-              <p className={styles.stepDesc}>{step.desc}</p>
+              <div className={styles.textContent}>
+                <h3 className={styles.stepTitle}>{step.title}</h3>
+                <p className={styles.stepDesc}>{step.desc}</p>
+              </div>
             </div>
           </div>
         ))}

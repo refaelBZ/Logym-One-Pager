@@ -17,10 +17,7 @@
 }
 
 .title {
-  font-size: 2.8rem;
-  font-weight: $font-weight-bold;
-  color: $background-color;
-  margin-bottom: 16px;
+  @include headingTitle;
 }
 
 .description {
@@ -74,15 +71,21 @@
 
 .content {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-start;
 }
 
 .stepNumber {
   font-size: 4rem;
   font-weight: $font-weight-bold;
   color: rgba($background-color, 0.1);
-  position: absolute;
-  top: -40px;
-  z-index: 0;
+  flex-shrink: 0;
+}
+
+.textContent {
+  flex: 1;
 }
 
 .stepTitle {
@@ -90,8 +93,7 @@
   font-weight: $font-weight-bold;
   color: $background-color;
   margin-bottom: 12px;
-  position: relative;
-  z-index: 1;
+  text-align: left;
 }
 
 .stepDesc {
@@ -100,6 +102,7 @@
   line-height: $line-height-relaxed;
   position: relative;
   z-index: 1;
+  text-align: start;
 }
 
 @media (max-width: 768px) {

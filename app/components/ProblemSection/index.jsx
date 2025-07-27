@@ -1,26 +1,21 @@
 "use client";
 import styles from "./style.module.scss";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import { FiHelpCircle, FiClock, FiBarChart2 } from "react-icons/fi";
 
 const problems = [
   {
-    icon: (
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="none"/><text x="50%" y="55%" textAnchor="middle" fill="#eaff00" fontSize="32" fontWeight="bold" dominantBaseline="middle">?</text></svg>
-    ),
+    icon: <FiHelpCircle size={48} color="#eaff00" strokeWidth={2} />,
     title: "Memory betrays you at the worst time?",
     text: "Can't remember the weights from last week's session? Or that final set?"
   },
   {
-    icon: (
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#eaff00" strokeWidth="4"/><path d="M24 12v12l8 4" stroke="#eaff00" strokeWidth="3" strokeLinecap="round"/></svg>
-    ),
+    icon: <FiClock size={48} color="#eaff00" strokeWidth={2} />,
     title: "Is your workout time spent on guesswork?",
     text: "Every minute in the gym is valuable. Your focus should be on lifting, not calculating."
   },
   {
-    icon: (
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="28" width="8" height="12" fill="#eaff00"/><rect x="20" y="20" width="8" height="20" fill="#eaff00"/><rect x="32" y="12" width="8" height="28" fill="#eaff00"/></svg>
-    ),
+    icon: <FiBarChart2 size={48} color="#eaff00" strokeWidth={2} />,
     title: "All the effort, but no visible results?",
     text: "It's time to turn your hard work into progress you can actually see and feel."
   }
@@ -32,6 +27,7 @@ export default function ProblemSection() {
 
   return (
     <section className={styles.problemSection}>
+      <div className={styles.backgroundVisual}></div>
       <h2 className={`${styles.sectionTitle} animate-on-scroll`} ref={titleRef}>
         That feeling of being stuck? It's real.
       </h2>
