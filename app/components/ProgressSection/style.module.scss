@@ -1,9 +1,9 @@
 @import "../../../styles/vars";
 @import "../../../styles/mixins";
 
-.finalCtaSection {
+.progressSection {
   background: $background-color;
-  padding: 100px 20px;
+//   padding: 100px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,15 +19,14 @@
   width: 80%;
   height: 80%;
   transform: translate(-50%, -50%);
-  background-image: url('/Hero.webp'); // החלף בתמונה/טקסטורה מתאימה
+  background-image: url('/Hero.webp');
   background-size: cover;
   background-position: center;
   opacity: 0.1;
   filter: blur(20px);
 }
 
-
-.finalCtaSection::before {
+.progressSection::before {
   content: '';
   position: absolute;
   top: 0; left: 0;
@@ -37,35 +36,21 @@
   z-index: 1;
 }
 
-.content {
+.progressBarContainer {
   position: relative;
   z-index: 2;
+  width: 100%;
+  max-width: 700px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.title {
-  @include headingTitle;
-  color: white;
-  margin-bottom: 40px;
-  line-height: $line-height-tight;
-  max-width: 750px;
-}
-
-.subtitle {
-  font-size: $font-size-base;
-  color: $text-color;
-  margin-bottom: 40px;
-  max-width: 500px;
-  line-height: $line-height-relaxed;
-}
-
 @media (max-width: 768px) {
-  .title {
-    font-size: 2.2rem;
+  .progressSection {
+    // padding: 80px 20px;
   }
-  .finalCtaSection {
-    padding: 80px 20px;
+  .progressBarContainer {
+    max-width: 300px;
   }
 } 

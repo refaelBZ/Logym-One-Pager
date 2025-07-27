@@ -1,26 +1,21 @@
 "use client";
 import styles from "./style.module.scss";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import { FiEye, FiTrendingUp, FiClock } from "react-icons/fi";
 
 const benefits = [
   {
-    icon: (
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="20" rx="12" ry="14" stroke="#eaff00" strokeWidth="4"/><rect x="20" y="34" width="8" height="8" rx="2" fill="#eaff00"/><rect x="18" y="42" width="12" height="2" rx="1" fill="#eaff00"/></svg>
-    ),
+    icon: <FiEye size={48} color="#eaff00" strokeWidth={2} />,
     title: "Clarity & Focus",
     text: "Know exactly what you need to do on every exercise to move forward."
   },
   {
-    icon: (
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><polyline points="8,40 20,28 30,36 40,16" stroke="#eaff00" strokeWidth="4" fill="none"/><circle cx="8" cy="40" r="3" fill="#eaff00"/><circle cx="20" cy="28" r="3" fill="#eaff00"/><circle cx="30" cy="36" r="3" fill="#eaff00"/><circle cx="40" cy="16" r="3" fill="#eaff00"/></svg>
-    ),
+    icon: <FiTrendingUp size={48} color="#eaff00" strokeWidth={2} />,
     title: "Data-Driven Motivation",
     text: "See your progress visually and stay relentlessly motivated on your journey."
   },
   {
-    icon: (
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#eaff00" strokeWidth="4"/><path d="M24 14v10l7 7" stroke="#eaff00" strokeWidth="3" strokeLinecap="round"/><rect x="34" y="34" width="8" height="4" rx="2" fill="#eaff00"/><rect x="36" y="32" width="4" height="8" rx="2" fill="#eaff00"/></svg>
-    ),
+    icon: <FiClock size={48} color="#eaff00" strokeWidth={2} />,
     title: "Results You Can See & Feel",
     text: "Save precious time on logging and invest it in hard work that pays off."
   }
@@ -30,6 +25,7 @@ export default function BenefitsSection() {
   const titleRef = useScrollAnimation({ threshold: 0.4 });
   return (
     <section className={styles.benefitsSection}>
+      <div className={styles.backgroundVisual}></div>
       <div className={`${styles.intro} animate-on-scroll`} ref={titleRef}>
         <h2 className={styles.title}>More than tracking. Real results.</h2>
       </div>

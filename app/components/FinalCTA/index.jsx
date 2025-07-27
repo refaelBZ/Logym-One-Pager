@@ -9,7 +9,7 @@ export default function FinalCTA() {
 
   return (
     <section className={styles.finalCtaSection}>
-      <div className={styles.backgroundVisual}></div>
+      {/* <div className={styles.backgroundVisual}></div> */}
       <div className={styles.content} ref={contentRef}>
         <h2 className={`${styles.title} animate-on-scroll`}>
           Your time is too precious to waste on guesswork.
