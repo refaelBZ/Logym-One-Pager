@@ -16,8 +16,10 @@ export default function Hero() {
         loop 
         playsInline
         poster="/Hero.webp"
+        preload="metadata"
       >
-        <source src="/Herovid.webm" type="video/webm" />
+        <source src="/HeroVid.webm" type="video/webm" />
+        <source src="/Hero.webp" type="image/webp" />
         {/* Fallback לתמונה אם הוידאו לא נתמך */}
         <div className={styles.bgImage} />
       </video>
