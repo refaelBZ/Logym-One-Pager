@@ -9,7 +9,18 @@ export default function Hero() {
 
   return (
     <section className={styles.hero}>
-      <div className={`${styles.bgImage} ken-burns`} />
+      <video 
+        className={`${styles.bgVideo} ken-burns`}
+        autoPlay 
+        muted 
+        loop 
+        playsInline
+        poster="/Hero.webp"
+      >
+        <source src="/Herovid.webm" type="video/webm" />
+        {/* Fallback לתמונה אם הוידאו לא נתמך */}
+        <div className={styles.bgImage} />
+      </video>
       <div className={styles.overlay} />
       <Header />
       <div className={styles.heroContent}>

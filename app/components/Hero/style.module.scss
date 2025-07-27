@@ -5,6 +5,20 @@
 // .hero {  margin-top: -$header-height;
 //     z-index: -100;
 // }
+.bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  @include ken-burns-effect;
+}
+
 .bgImage {
   position: absolute;
   top: 0;
@@ -17,8 +31,6 @@
   z-index: 0;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
-  /* בוטל margin-top כדי למנוע חריגה מה-Header */
-  /* margin-top: -$header-height; */
   @include ken-burns-effect;
 }
 
@@ -125,12 +137,15 @@
 } 
 
 @media (max-width: 768px) {
-
     .heroContent{
         width: auto;
         padding: 20px
     }
     .textWrapper{
       width: 80vw;
+    }
+    
+    .bgVideo {
+      object-position: 70% center;
     }
 }
