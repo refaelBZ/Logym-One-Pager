@@ -6,7 +6,6 @@ import BenefitsSection from "./components/BenefitsSection";
 import ProgressSection from "./components/ProgressSection";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
-import TransformationSection from "./components/TransformationSection/Index";
 import Workout from "./components/Workout";
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
       <Hero />
       <ProblemSection />
       <SolutionSection />
-      {/* <TransformationSection /> */}
       <BenefitsSection />
       <ProgressSection />
       <FinalCTA />
