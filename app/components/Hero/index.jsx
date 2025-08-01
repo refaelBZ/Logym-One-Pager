@@ -36,8 +36,14 @@ export default function Hero() {
           <p className={`${styles.description} animate-on-scroll`} data-stagger="2">
             Everything you need to focus on what truly matters – your progress.
           </p>
-          <Button className="animate-on-scroll" data-stagger="3">
-            Start Progressing for Free
+          <Button 
+            href="https://app.logym.fit/" 
+            className="animate-on-scroll" 
+            data-stagger="3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Start Seeing Results
           </Button>
         </div>
         <div className={`${styles.mockupWrapper} animate-slide-right`}>
