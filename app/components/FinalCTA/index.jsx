@@ -17,8 +17,14 @@ export default function FinalCTA() {
         <p className={`${styles.subtitle} animate-on-scroll`}>
           The path to real progress starts with a single click. No payment, no commitment. Just results.
         </p>
-        <Button className="animate-scale animate-in" ref={buttonRef}>
-          Start Progressing for Free
+        <Button 
+          href="https://app.logym.fit/" 
+          className="animate-scale animate-in" 
+          ref={buttonRef}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Start Seeing Results
         </Button>
       </div>
     </section>
