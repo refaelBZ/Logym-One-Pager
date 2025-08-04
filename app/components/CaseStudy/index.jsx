@@ -115,7 +115,7 @@ const CaseStudy = () => {
                   alt={images[index].alt}
                 />
               </div>
-              <span className={styles.imageCaption}>לחץ להגדלה</span>
+              <span className={styles.imageCaption}>{images[index].alt}</span>
             </div>
           ))}
         </div>
@@ -155,7 +155,7 @@ const CaseStudy = () => {
             הסטנדרט שלי היה ביצוע ללא פשרות, אבל מעבר לדיוק הטכני, בחרתי כל אלמנט ויזואלי כדי לשרת מטרה אסטרטגית שבנוסף גם תשכנע את הגולש. לדוגמה, כך קיבלתי החלטות איך להציג את הרכיבים הבאים:
           </p>
           <ul className={styles.bulletList}>
-            <li>HERO: המטרה של ה-Hero Section הייתה להגחיך את האלטרנטיבה. יצרתי דימוי שמציג את המעבר מהכאוס של מעקב ידני על נייר אל הסדר והיעילות של האפליקציה - מה שללא ספק מדגיש עד כמה Logym היא הפתרון ההגיוני היחיד למי שרוצה לראות התקדמות.</li>
+            <li>Hero: המטרה של הסרטון הייתה להגחיך את האלטרנטיבה. יצרתי דימוי שמציג את המעבר מהכאוס של מעקב ידני על נייר אל הסדר והיעילות של האפליקציה - מה שללא ספק מדגיש עד כמה Logym היא הפתרון ההגיוני היחיד למי שרוצה לראות התקדמות.</li>
             <li>מבנה השלבים: במקום להציג את שלושת שלבי השימוש באפליקציה בקו ישר ומשעמם, עיצבתי אותם באופן מדורג. הבחירה הזו נועדה להמחיש למשתמש את תחושת הדינמיות, הצמיחה וההתקדמות שהוא עומד לחוות באפליקציה.</li>
           </ul>
           <div className={styles.imageGrid}>
@@ -171,7 +171,7 @@ const CaseStudy = () => {
                     alt={images[index].alt}
                   />
                 </div>
-                <span className={styles.imageCaption}>לחץ להגדלה</span>
+                <span className={styles.imageCaption}>{images[index].alt}</span>
               </div>
             ))}
           </div>
@@ -191,27 +191,46 @@ const CaseStudy = () => {
               alt={images[5].alt}
             />
           </div>
-          <span className={styles.resultImageCaption}>לחץ להגדלה - One Pager Complete</span>
+          <span className={styles.resultImageCaption}>{images[5].alt}</span>
         </div>
         <p className={styles.paragraph}>
-          התוצאה הסופית היא יותר מדף אינטרנט שעושה תצוגת תכלית. רק כשראיתי את התוצאה הבנתי שמדובר בנכס אסטרטגי וקריטי לכל מוצר SAAS. במקום להסביר לכל אחד מה הפיצ'רים ואיך המוצר עובד, עכשיו אפשר פשוט לשלוח קישור. משם, הדף עושה את עבודת השכנוע, ומניע את המשתמשים הנכונים לפעולה בצורה זורמת וטבעית.
+        התוצאה הסופית היא יותר מדף אינטרנט שעושה תצוגת תכלית לאפליקציה. כשראיתי את התוצאה הבנתי שמדובר בנכס אסטרטגי וקריטי לכל מוצר SAAS. במקום להסביר לכל אחד מה הפיצ'רים ואיך המוצר עובד, עכשיו אפשר פשוט לשלוח לו קישור שיספר את הסיפור. משם, הדף עושה את עבודת השכנוע, ומניע את המשתמשים הנכונים לפעולה בצורה זורמת וטבעית.
         </p>
         <p className={styles.paragraph}>
-          התהליך המפורט הזה בעצם גם מסכם ומדגים את הצעת הערך המרכזית שאני מציע ליזמים: חבילת 'SaaS Launchpad' שלוקחת מוצר טכנולוגי ומעניקה לו את הקול השיווקי והעוצמה הדרושים לו כדי לכבוש את השוק. זו רמת החשיבה, הביצוע והשותפות שאני מביא לכל פרויקט.
+        התהליך הזה מדגים במדויק את הצעת הערך המרכזית שלי ליזמים, בליווי רמת החשיבה, הביצוע והשותפות שאני מביא לכל פרויקט: חבילת 'SaaS Launchpad' - שלוקחת מוצר טכנולוגי ומעניקה לו את הסיפור והוויז'ואל הדרושים לו כדי לכבוש את השוק ולהביא משתמשים.
         </p>
       </section>
 
       {/* Footer */}
       <footer className={styles.footer}>
-        <p>
-         My linkedin: {' '}
+        <div className={styles.footerLinks}>
+          <a 
+            href="https://app.logym.fit/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={styles.footerLink}
+          >
+            Visit the App
+          </a>
+          <span className={styles.separator}>|</span>
+          <a 
+            href="/" 
+            className={styles.footerLink}
+          >
+            Visit the One-Pager
+          </a>
+          <span className={styles.separator}>|</span>
           <a 
             href="https://www.linkedin.com/in/refaelbz/" 
             target="_blank" 
             rel="noopener noreferrer"
+            className={styles.footerLink}
           >
-            Refael Ben Zikri
+            My LinkedIn
           </a>
+        </div>
+        <p className={styles.footerText}>
+          Refael Ben Zikri © 2025
         </p>
       </footer>
 
