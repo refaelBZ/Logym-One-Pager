@@ -61,7 +61,7 @@ const CaseStudy = () => {
             <div className={styles.loadingTitleBox}></div>
             <div className={styles.loadingSubtitleBox}></div>
           </header>
-          
+
           <section className={styles.loadingSection}>
             <div className={styles.loadingSectionHeader}>
               <div className={styles.loadingYellowLine}></div>
@@ -97,21 +97,24 @@ const CaseStudy = () => {
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
           <div className={styles.yellowLine}></div>
-          <h2 className={styles.sectionTitle}>האתגר: שריר חזק, ללא במה להציג אותו</h2>
+          <h2 className={styles.sectionTitle}>האתגר: בעידן ה-AI, הסיפור הוא המלך</h2>
         </div>
         <p className={styles.paragraph}>
-          אחרי שפיתחתי את Logym – פלטפורמת SaaS מתקדמת המאפשרת מעקב והתקדמות אמיתית באימוני כושר – נתקלתי בדילמה המוכרת של כל יזם: יש לי מוצר שעובד ושימושי, אבל אין לו סיפור, ובטח שלא דרך לתקשר את הערך שלו ללקוח פוטנציאלי. זה השלב שבו הבנתי שאני צריך לבנות את "כרטיס הביקור" שיגרום לאנשים להבין את הכוח שמאחוריו ולרצות להשתמש בו.
+          אנחנו חיים בעידן שבו בזכות כלי AI, האתגר הטכני של בניית מוצר הפך לפשוט מאי פעם. אבל האתגר האמיתי, זה שקובע אם מיזם יצליח או ייכשל, עבר מהפיתוח אל השכנוע.
+        </p>
+        <p className={styles.paragraph}>
+          חוויתי את זה בדיוק כשסיימתי לפתח את Logym – פלטפורמת SaaS מתקדמת המאפשרת מעקב והתקדמות אמיתית באימוני כושר. היה לי רעיון חזק ומוצר שימושי, אבל גיליתי מהר מאוד שזה לא מספיק. ללא סיפור ברור ומסר מבדל ומשכנע, המוצר שלי היה חסר קול ודרך להגיע למשתמשים הפוטנציאליים שלו.
         </p>
         <div className={styles.imageGrid}>
           {[0, 1, 2].map((index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={styles.imageItem}
               onClick={() => openLightbox(index)}
             >
               <div className={styles.imageBox}>
-                <img 
-                  src={images[index].src} 
+                <img
+                  src={images[index].src}
                   alt={images[index].alt}
                 />
               </div>
@@ -160,14 +163,14 @@ const CaseStudy = () => {
           </ul>
           <div className={styles.imageGrid}>
             {[3, 4].map((index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={styles.imageItem}
                 onClick={() => openLightbox(index)}
               >
                 <div className={styles.imageBox}>
-                  <img 
-                    src={images[index].src} 
+                  <img
+                    src={images[index].src}
                     alt={images[index].alt}
                   />
                 </div>
@@ -186,43 +189,54 @@ const CaseStudy = () => {
         </div>
         <div className={styles.resultImageContainer} onClick={() => openLightbox(5)}>
           <div className={styles.resultImageBox}>
-            <img 
-              src={images[5].src} 
+            <img
+              src={images[5].src}
               alt={images[5].alt}
             />
           </div>
           <span className={styles.resultImageCaption}>{images[5].alt}</span>
         </div>
         <p className={styles.paragraph}>
-        התוצאה הסופית היא יותר מדף אינטרנט שעושה תצוגת תכלית לאפליקציה. כשראיתי את התוצאה הבנתי שמדובר בנכס אסטרטגי וקריטי לכל מוצר SAAS. במקום להסביר לכל אחד מה הפיצ'רים ואיך המוצר עובד, עכשיו אפשר פשוט לשלוח לו קישור שיספר את הסיפור. משם, הדף עושה את עבודת השכנוע, ומניע את המשתמשים הנכונים לפעולה בצורה זורמת וטבעית.
+          כשראיתי את התוצאה הסופית, הבנתי שמדובר בנכס אסטרטגי שמשנה את כללי המשחק עבור מוצר SaaS. במקום להסביר לכל אחד מה הפיצ'רים ואיך המוצר עובד, עכשיו אפשר פשוט לשלוח לו קישור.
         </p>
+
         <p className={styles.paragraph}>
-        התהליך הזה מדגים במדויק את הצעת הערך המרכזית שלי ליזמים, בליווי רמת החשיבה, הביצוע והשותפות שאני מביא לכל פרויקט: חבילת 'SaaS Launchpad' - שלוקחת מוצר טכנולוגי ומעניקה לו את הסיפור והוויז'ואל הדרושים לו כדי לכבוש את השוק ולהביא משתמשים.
+          דף המוצר הוא היעד המרכזי שאליו מתנקזות כל הפעולות השיווקיות – מפוסט בפייסבוק וסרטון בטיקטוק, ועד קמפיין בגוגל או מייל למשקיעים. זה בעצם הכלי שנותן לכל המאמצים האלה סיכוי אמיתי להצליח.
+        </p>
+
+        <h3 className={styles.subsectionTitle}>הצעת הערך שלי</h3>
+
+        <p className={styles.paragraph}>
+          התהליך הזה לא עסק רק בפיתוח הטכני של דף המוצר (את זה כל כלי AI יודע לעשות היום). האתגר האמיתי היה בתהליך המלא: שילוב של חשיבה אסטרטגית לצד עיצוב וביצוע מדויק, שהופך מוצר טכנולוגי לסיפור ויזואלי ומשכנע שכובש את השוק.
+        </p>
+
+        <p className={styles.paragraph}>
+          זו בדיוק המומחיות שאני מציע ליזמים: חבילת 'SaaS Launchpad' מותאמת אישית, המבוססת על רמת החשיבה, הביצוע והשותפות שהודגמו בתהליך הזה.
         </p>
       </section>
 
       {/* Footer */}
       <footer className={styles.footer}>
         <div className={styles.footerLinks}>
-          <a 
-            href="https://app.logym.fit/" 
-            target="_blank" 
+          <a
+            href="https://app.logym.fit/"
+            target="_blank"
             rel="noopener noreferrer"
             className={styles.footerLink}
           >
             Visit the App
           </a>
           <span className={styles.separator}>|</span>
-          <a 
-            href="/" 
+          <a
+            href="/"
             className={styles.footerLink}
           >
             Visit the One-Pager
           </a>
           <span className={styles.separator}>|</span>
-          <a 
-            href="https://www.linkedin.com/in/refaelbz/" 
-            target="_blank" 
+          <a
+            href="https://www.linkedin.com/in/refaelbz/"
+            target="_blank"
             rel="noopener noreferrer"
             className={styles.footerLink}
           >
@@ -236,19 +250,19 @@ const CaseStudy = () => {
 
       {/* Lightbox */}
       {lightboxOpen && (
-        <div 
+        <div
           className={styles.lightbox}
           onClick={closeLightbox}
         >
-          <button 
+          <button
             className={styles.lightboxCloseBtn}
             onClick={closeLightbox}
             aria-label="סגור"
           >
             ✕
           </button>
-          
-          <button 
+
+          <button
             className={`${styles.lightboxNavBtn} ${styles.prevBtn}`}
             onClick={(e) => {
               e.stopPropagation();
@@ -258,19 +272,19 @@ const CaseStudy = () => {
           >
             &lt;
           </button>
-          
-          <div 
+
+          <div
             className={styles.lightboxContent}
             onClick={(e) => e.stopPropagation()}
           >
-            <img 
-              src={images[currentImage].src} 
+            <img
+              src={images[currentImage].src}
               alt={images[currentImage].alt}
             />
             <p>{images[currentImage].alt}</p>
           </div>
-          
-          <button 
+
+          <button
             className={`${styles.lightboxNavBtn} ${styles.nextBtn}`}
             onClick={(e) => {
               e.stopPropagation();
@@ -280,7 +294,7 @@ const CaseStudy = () => {
           >
             &gt;
           </button>
-          
+
           <div className={styles.lightboxCounter}>
             {currentImage + 1} מתוך {images.length}
           </div>
