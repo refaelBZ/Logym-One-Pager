@@ -4,7 +4,7 @@ This is the repository for the official landing page of the [Logym.fit](https://
 
 [![Website](https://img.shields.io/badge/View_Live-logym.fit-green?style=for-the-badge)](https://www.logym.fit/)
 
-## 🛠Tech Stack & Development
+## Tech Stack & Development
 
 This project was built with modern tools to ensure great performance and a high-quality result.
 
