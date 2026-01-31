@@ -11,7 +11,7 @@
   "dependencies": {
     "@fontsource/assistant": "^5.2.7",
     "autoprefixer": "^10.4.21",
-    "next": "15.4.2",
+    "next": "15.4.10",
     "postcss": "^8.5.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
