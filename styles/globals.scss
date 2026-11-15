@@ -1,6 +1,72 @@
 @import './_vars.scss';
 @import './_mixins.scss';
 
+:root {
+  --color-bg: #{$color-bg};
+  --color-surface: #{$color-surface};
+  --color-accent: #{$color-accent};
+  --color-text: #{$color-text};
+  --color-text-muted: #{$color-text-muted};
+  --color-text-strong: #{$color-white};
+  --color-border: #{$color-border};
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+  --color-dim: #{$color-dim};
+  --color-highlight: #{$color-highlight};
+  --color-progress: #{$color-progress};
+  --color-track: #{$color-track};
+  --text-article: #{$color-text-article};
+
+  --font-sans: #{$font-family-sans};
+  --font-mono: #{$font-family-mono};
+  --font-size-xs: #{$font-size-xs};
+  --font-size-sm: #{$font-size-sm};
+  --font-size-base: #{$font-size-base};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-xl: #{$font-size-xl};
+  --font-size-xxl: #{$font-size-xxl};
+  --font-size-xxxl: #{$font-size-xxxl};
+  --font-weight-light: #{$font-weight-light};
+  --font-weight-normal: #{$font-weight-normal};
+  --font-weight-medium: #{$font-weight-medium};
+  --font-weight-bold: #{$font-weight-bold};
+  --line-height-tight: #{$line-height-tight};
+  --line-height-normal: #{$line-height-normal};
+  --line-height-relaxed: #{$line-height-relaxed};
+  --tracking-logo: #{$tracking-logo};
+
+  --space-4: #{$space-4};
+  --space-5: #{$space-5};
+  --space-8: #{$space-8};
+  --space-12: #{$space-12};
+  --space-15: #{$space-15};
+  --space-16: #{$space-16};
+  --space-18: #{$space-18};
+  --space-20: #{$space-20};
+  --space-24: #{$space-24};
+  --space-30: #{$space-30};
+  --space-32: #{$space-32};
+  --space-40: #{$space-40};
+  --space-48: #{$space-48};
+  --space-56: #{$space-56};
+  --space-64: #{$space-64};
+  --space-80: #{$space-80};
+  --space-100: #{$space-100};
+
+  --radius-sm: #{$radius-sm};
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+  --radius-xl: #{$radius-xl};
+  --radius-2xl: #{$radius-36};
+
+  --header-height: #{$header-height};
+  --footer-height: #{$footer-height};
+  --content-width: #{$content-width};
+  --content-wide: #{$content-wide};
+  --bp-md: #{$bp-md};
+  --bp-lg: #{$bp-lg};
+}
+
 /* CSS Reset - ביטול default margins של headings ו-paragraphs */
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
@@ -14,7 +80,7 @@ h1, h2, h3, h4, h5, h6, p {
 body {
   background: $background-color;
   color: $text-color;
-  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-family: var(--font-sans);
   margin: 0;
   padding: 0;
   direction: ltr;

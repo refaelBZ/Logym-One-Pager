@@ -1,12 +1,12 @@
 @import '_vars.scss';
 
 @mixin page {
-    padding: 20px;
+    padding: $space-20;
     display: flex;
     height: calc(100vh - 79px);
     flex-direction: column;
     justify-content: start;
-    gap: 20px;
+    gap: $space-20;
     background-color: $background-color;
   }
 
@@ -14,25 +14,25 @@
     font-size: $font-size-xxxl;
     font-weight: $font-weight-bold;
     color: $background-color;
-    margin-bottom: 16px;
+    margin-bottom: $space-16;
   }
   @mixin subHeadingTitle {
     font-size: $font-size-xl;
     font-weight: $font-weight-bold;
     color: $background-color;
-    margin-bottom: 16px;
+    margin-bottom: $space-16;
   }
 
   
   @mixin layout-padding {
-    padding: 20px;
+    padding: $space-20;
   }
   
   @mixin card-style {
     background-color: rgba($dark-gray, 0.7);
     backdrop-filter: blur(20px);
-    border-radius: 15px;
-    padding: 40px;
+    border-radius: $radius-15;
+    padding: $space-40;
     display: flex;
     flex-direction: column;
     // align-items: center;
@@ -51,8 +51,8 @@
   
   @mixin border-card-style {
     border: 1px solid $border-color;
-    border-radius: 15px;
-    padding: 20px;
+    border-radius: $radius-15;
+    padding: $space-20;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -63,8 +63,8 @@
     background-color: $bg-color;
     color: $text-color;
     border: none;
-    border-radius: 5px;
-    padding: 15px 30px;
+    border-radius: $radius-5;
+    padding: $space-15 $space-30;
     font-size: $font-size-base;
     font-weight: $font-weight-normal;
     line-height: $line-height-normal;
@@ -89,9 +89,9 @@
   color: $background-color;
   
   // עיצוב ומידות
-  padding: 16px 48px;
+  padding: $space-16 $space-48;
   // height: 48px;
-  border-radius: 12px;
+  border-radius: $radius-12;
   border: 1px solid transparent; // הכנה לאנימציית המסגרת
   // רקע וצל
   background: linear-gradient(45deg, lighten($main-color, 5%), $main-color);
@@ -144,15 +144,15 @@
   }
   
   @mixin text-highlight {
-    color: #ff0;
+    color: $color-highlight;
     font-weight: $font-weight-bold;
   }
   
   @mixin input {
     border: 1px solid $border-color;
-    border-radius: 15px;
+    border-radius: $radius-15;
     background-color: $dark-gray;
-    padding: 15px 30px;
+    padding: $space-15 $space-30;
     font-size: $font-size-base;
     line-height: $line-height-normal;
     display: flex;
@@ -163,7 +163,7 @@
   }
   
   @mixin label {
-    color: white;
+    color: $color-white;
     font-size: $font-size-base;
     font-weight: $font-weight-normal;
     line-height: $line-height-normal;
@@ -171,9 +171,9 @@
   
   @mixin menuItem {
     border: 1px solid $border-color;
-    border-radius: 15px;
+    border-radius: $radius-15;
     background-color: $dark-gray;
-    padding: 5px;
+    padding: $space-5;
     font-size: $font-size-base;
     line-height: $line-height-normal;
     font-weight: $font-weight-light;
@@ -199,8 +199,8 @@
     font-size: $font-size-xl;
     font-weight: $font-weight-normal;
     line-height: $line-height-tight;
-    padding-top: 20px;
-    color: white;
+    padding-top: $space-20;
+    color: $color-white;
     text-align: start;
   }
 

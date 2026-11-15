@@ -1,0 +1,28 @@
+.faq {
+  margin-top: var(--space-48);
+}
+
+.title {
+  color: var(--color-text-strong);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.item {
+  margin-top: var(--space-24);
+}
+
+.question {
+  color: var(--color-text-strong);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
+.answer {
+  margin-top: var(--space-8);
+  color: var(--text-article);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}

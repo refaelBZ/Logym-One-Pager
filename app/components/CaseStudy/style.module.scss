@@ -2,15 +2,15 @@
 
 .container {
   min-height: 100vh;
-  background-color: #1A1A1A;
+  background-color: $background-color;
   padding: 1.5rem 1.5rem;
   font-family: inherit;
-  color: #98989c;
+  color: $text-color;
   max-width: 48rem;
   margin: 0 auto;
   direction: rtl;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     padding: 2.5rem 2.5rem;
   }
 }
@@ -23,14 +23,14 @@
   margin-bottom: 2.5rem;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     margin-bottom: 3.5rem;
   }
 }
 
 .loadingTitleBox {
   height: 2.5rem;
-  background-color: #242424;
+  background-color: $dark-gray;
   border-radius: 0.25rem;
   width: 50%;
   margin: 0 auto 1rem;
@@ -38,7 +38,7 @@
 
 .loadingSubtitleBox {
   height: 1.5rem;
-  background-color: #242424;
+  background-color: $dark-gray;
   border-radius: 0.25rem;
   width: 33.333333%;
   margin: 0 auto;
@@ -47,11 +47,11 @@
 .loadingSection {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  background-color: #242424;
+  background-color: $dark-gray;
   border-radius: 0.75rem;
   padding: 1.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     margin-bottom: 4rem;
   }
 }
@@ -65,13 +65,13 @@
 .loadingYellowLine {
   width: 3.5rem;
   height: 0.25rem;
-  background-color: #eaff00;
+  background-color: $main-color;
   margin-left: 2rem;
 }
 
 .loadingSectionTitle {
   height: 2rem;
-  background-color: #242424;
+  background-color: $dark-gray;
   border-radius: 0.25rem;
   width: 75%;
 }
@@ -84,7 +84,7 @@
 
 .loadingTextLine {
   height: 1rem;
-  background-color: #242424;
+  background-color: $dark-gray;
   border-radius: 0.25rem;
 
   &:last-child {
@@ -99,7 +99,7 @@
   gap: 1rem;
   margin-top: 2rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     gap: 1.5rem;
   }
 }
@@ -113,11 +113,11 @@
 .loadingImageBox {
   width: 8rem;
   height: 8rem;
-  border: 2px solid #424242;
+  border: 2px solid $border-color;
   border-radius: 0.5rem;
-  background-color: #242424;
+  background-color: $dark-gray;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     width: 12rem;
     height: 8rem;
   }
@@ -128,7 +128,7 @@
   margin-bottom: 2.5rem;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     margin-bottom: 3.5rem;
   }
 }
@@ -137,9 +137,9 @@
   font-size: 1.875rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
-  color: white;
+  color: $color-white;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     font-size: 2.25rem;
   }
 }
@@ -147,9 +147,9 @@
 .subtitle {
   font-size: 1.125rem;
   font-weight: 500;
-  color: #D9D9D9;
+  color: $gray-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     font-size: 1.25rem;
   }
 }
@@ -157,11 +157,11 @@
 .section {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  background-color: #242424;
+  background-color: $dark-gray;
   border-radius: 0.75rem;
   padding: 1.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     margin-bottom: 4rem;
   }
 }
@@ -169,11 +169,11 @@
 .lastSection {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  background-color: #242424;
+  background-color: $dark-gray;
   border-radius: 0.75rem;
   padding: 1.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     margin-bottom: 5rem;
   }
 }
@@ -187,16 +187,16 @@
 .yellowLine {
   width: 3.5rem;
   height: 0.25rem;
-  background-color: #eaff00;
+  background-color: $main-color;
   margin-left: 2rem;
 }
 
 .sectionTitle {
   font-size: 1.25rem;
   font-weight: 700;
-  color: white;
+  color: $color-white;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     font-size: 1.5rem;
   }
 }
@@ -206,7 +206,7 @@
   font-size: 1rem;
   line-height: 1.625;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     font-size: 1.125rem;
   }
 }
@@ -215,9 +215,9 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: white;
+  color: $color-white;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     font-size: 1.25rem;
   }
 }
@@ -230,7 +230,7 @@
   list-style-type: disc;
   list-style-position: inside;
   margin-bottom: 1.5rem;
-  color: #D9D9D9;
+  color: $gray-color;
   padding-right: 1rem;
 
   li {
@@ -245,7 +245,7 @@
   gap: 1rem;
   margin-top: 2rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     gap: 1.5rem;
   }
 }
@@ -265,12 +265,12 @@
 .imageBox {
   width: 8rem;
   height: 8rem;
-  border: 2px solid #424242;
+  border: 2px solid $border-color;
   border-radius: 0.5rem;
-  background-color: #1A1A1A;
+  background-color: $background-color;
   overflow: hidden;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     width: 12rem;
     height: 8rem;
   }
@@ -286,7 +286,7 @@
 .imageCaption {
   margin-top: 0.5rem;
   font-size: 0.75rem;
-  color: #D9D9D9;
+  color: $gray-color;
 }
 
 .resultImageContainer {
@@ -306,11 +306,11 @@
   width: 100%;
   height: 16rem;
   border-radius: 0.5rem;
-  border: 2px solid #424242;
-  background-color: #1A1A1A;
+  border: 2px solid $border-color;
+  background-color: $background-color;
   overflow: hidden;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     height: 24rem;
   }
 
@@ -325,13 +325,13 @@
 .resultImageCaption {
   margin-top: 0.5rem;
   font-size: 0.875rem;
-  color: #D9D9D9;
+  color: $gray-color;
 }
 
 .footer {
   text-align: center;
-  color: #98989c;
-  border-top: 1px solid #424242;
+  color: $text-color;
+  border-top: 1px solid $border-color;
   padding-top: 1.5rem;
   padding-bottom: 2.5rem;
 }
@@ -350,13 +350,13 @@
 }
 
 .footerLink {
-  color: #eaff00;
+  color: $main-color;
   text-decoration: underline;
   font-size: 0.875rem;
   transition: color 0.2s ease;
 
   &:hover {
-    color: white;
+    color: $color-white;
   }
 
   @media (max-width: 767px) {
@@ -365,7 +365,7 @@
 }
 
 .separator {
-  color: #666;
+  color: $color-dim;
   margin: 0 0.5rem;
 
   @media (max-width: 767px) {
@@ -375,7 +375,7 @@
 
 .footerText {
   font-size: 0.75rem;
-  color: #666;
+  color: $color-dim;
   margin: 0;
 
   @media (max-width: 767px) {
@@ -390,7 +390,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba($color-black, 0.9);
   z-index: 50;
   display: flex;
   align-items: center;
@@ -402,7 +402,7 @@
   position: absolute;
   top: 1rem;
   left: 1rem;
-  color: white;
+  color: $color-white;
   font-size: 1.5rem;
   z-index: 10;
   background: none;
@@ -414,10 +414,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: white;
+  color: $color-white;
   font-size: 2.5rem;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba($color-black, 0.5);
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
@@ -429,7 +429,7 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba($color-black, 0.75);
   }
 
   &.prevBtn {
@@ -452,13 +452,13 @@
     object-fit: contain;
     border-radius: 0.5rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: $bp-md) {
       height: 70vh;
     }
   }
 
   p {
-    color: white;
+    color: $color-white;
     text-align: center;
     margin-top: 1rem;
     font-size: 1.125rem;
@@ -471,7 +471,7 @@
   left: 0;
   right: 0;
   text-align: center;
-  color: white;
+  color: $color-white;
   font-size: 0.875rem;
 }
 

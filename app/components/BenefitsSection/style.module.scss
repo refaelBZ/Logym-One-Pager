@@ -3,7 +3,7 @@
 
 .benefitsSection {
   background: $background-color;
-  padding: 100px 20px;
+  padding: $space-100 $space-20;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,26 +31,26 @@
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at center, rgba(26,26,26,0) 0%, rgba(26,26,26,0.8) 100%);
+  background: radial-gradient(ellipse at center, rgba($background-color,0) 0%, rgba($background-color,0.8) 100%);
   z-index: 1;
 }
 
 .intro {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: $space-100;
   position: relative;
   z-index: 2;
 }
 
 .title {
   @include subHeadingTitle;
-  color: white;
+  color: $color-white;
 }
 
 .benefitsContainer {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: $space-40;
   width: 100%;
   max-width: 900px;
   position: relative;
@@ -61,7 +61,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: $space-40;
   &.reversed {
     flex-direction: row-reverse;
   }
@@ -75,6 +75,7 @@
 
 .iconContainer {
   flex-shrink: 0;
+  color: $main-color;
   width: 120px;
   height: 120px;
   display: flex;
@@ -95,15 +96,15 @@
   line-height: $line-height-relaxed;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bp-md) {
   .benefitsSection {
-    padding: 80px 20px;
+    padding: $space-80 $space-20;
   }
   .title {
     font-size: 2.2rem;
   }
   .benefitsContainer {
-    gap: 80px;
+    gap: $space-80;
   }
   .intro{
     margin-bottom: 50px;
@@ -127,8 +128,8 @@
       margin: 0;
       background: radial-gradient(circle, rgba($main-color, 0.15) 0%, rgba($main-color, 0) 70%);
       border-radius: 50%;
-      width: 100px;
-      height: 100px;
+      width: $space-100;
+      height: $space-100;
       
 
     }

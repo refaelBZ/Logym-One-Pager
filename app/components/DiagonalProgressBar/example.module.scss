@@ -5,11 +5,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  padding: 40px 20px;
+  gap: $space-30;
+  padding: $space-40 $space-20;
   background: $background-color;
   min-height: 100vh;
-  color: white;
+  color: $color-white;
 }
 
 .progressBarWrapper {
@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
   min-height: 200px;
-  padding: 20px;
+  padding: $space-20;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   backdrop-filter: blur(10px);
@@ -25,14 +25,14 @@
 
 .controls {
   display: flex;
-  gap: 20px;
+  gap: $space-20;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .button {
   @include button-style;
-  padding: 12px 24px;
+  padding: $space-12 $space-24;
   font-size: 1rem;
   border: none;
   border-radius: 8px;
@@ -41,7 +41,7 @@
   
   &:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 8px 25px rgba($color-progress, 0.3);
   }
   
   &:disabled {
@@ -56,7 +56,7 @@
   
   h3 {
     color: $main-color;
-    margin-bottom: 20px;
+    margin-bottom: $space-20;
     font-size: 1.5rem;
   }
   
@@ -65,9 +65,9 @@
     padding: 0;
     
     li {
-      padding: 8px 0;
+      padding: $space-8 0;
       position: relative;
-      padding-right: 20px;
+      padding-right: $space-20;
       
       &::before {
         content: '✓';
@@ -80,9 +80,9 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bp-md) {
   .exampleContainer {
-    padding: 20px 10px;
+    padding: $space-20 10px;
   }
   
   .controls {

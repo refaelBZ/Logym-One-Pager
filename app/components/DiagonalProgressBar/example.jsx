@@ -35,8 +35,8 @@ const DiagonalProgressBarExample = () => {
           duration={2000}
           width={300}
           height={150}
-          color="#00ff88"
-          backgroundColor="#333"
+          color="var(--color-progress)"
+          backgroundColor="var(--color-track)"
           showPercentage={true}
         />
       </div>

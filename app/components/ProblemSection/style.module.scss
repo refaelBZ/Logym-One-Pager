@@ -2,7 +2,7 @@
 @import "../../../styles/mixins";
 
 .problemSection {
-  padding: 80px 20px;
+  padding: $space-80 $space-20;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,14 +32,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at center, rgba(26,26,26,0) 0%, rgba(26,26,26,0.8) 100%);
+  background: radial-gradient(ellipse at center, rgba($background-color,0) 0%, rgba($background-color,0.8) 100%);
   z-index: 1;
 }
 
 .sectionTitle {
   @include subHeadingTitle;
-  color: white;
-  margin-bottom: 56px;
+  color: $color-white;
+  margin-bottom: $space-56;
   text-align: center;
   max-width: 600px;
   position: relative;
@@ -48,7 +48,7 @@
 
 .cards {
   display: flex;
-  gap: 40px;
+  gap: $space-40;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
@@ -64,7 +64,7 @@
   // height: 200px;
 //   flex: 1 1 280px;
   text-align: center;
-  padding: 30px;
+  padding: $space-30;
   transition: all 0.3s ease;
   &:hover{
     cursor: pointer;
@@ -72,13 +72,14 @@
       color: $main-color;
     }
     .cardText{
-      color: white;
+      color: $color-white;
     }
   }
 }
 
 .icon {
-  margin-bottom: 24px;
+  color: $main-color;
+  margin-bottom: $space-24;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,8 +88,8 @@
 .cardTitle {
   font-size: $font-size-lg;
   font-weight: $font-weight-normal;
-  color: white;
-  margin-bottom: 12px;
+  color: $color-white;
+  margin-bottom: $space-12;
 }
 
 .cardText {
@@ -98,10 +99,10 @@
   line-height: $line-height-relaxed;
 }
 
-@media (max-width: 900px) {
+@media (max-width: $bp-stack) {
   .cards {
     flex-direction: column;
-    gap: 24px;
+    gap: $space-24;
     align-items: center;
   }
   .card {

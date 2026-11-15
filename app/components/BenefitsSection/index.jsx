@@ -5,17 +5,17 @@ import { FiEye, FiTrendingUp, FiClock } from "react-icons/fi";
 
 const benefits = [
   {
-    icon: <FiEye size={48} color="#eaff00" strokeWidth={2} />,
+    icon: <FiEye size={48} strokeWidth={2} />,
     title: "Clarity & Focus",
     text: "Know exactly what you need to do on every exercise to move forward."
   },
   {
-    icon: <FiTrendingUp size={48} color="#eaff00" strokeWidth={2} />,
+    icon: <FiTrendingUp size={48} strokeWidth={2} />,
     title: "Data-Driven Motivation",
     text: "See your progress visually and stay relentlessly motivated on your journey."
   },
   {
-    icon: <FiClock size={48} color="#eaff00" strokeWidth={2} />,
+    icon: <FiClock size={48} strokeWidth={2} />,
     title: "Results You Can See & Feel",
     text: "Save precious time on logging and invest it in hard work that pays off."
   }
