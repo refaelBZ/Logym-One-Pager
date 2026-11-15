@@ -1,9 +1,12 @@
 'use client'
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from './style.module.scss';
+import { CTA_LOCATION, appCtaUrl, trackCtaClick } from '@/lib/analytics';
 
 const CaseStudy = () => {
+  const pathname = usePathname() || '/casestudy';
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
@@ -219,10 +222,11 @@ const CaseStudy = () => {
       <footer className={styles.footer}>
         <div className={styles.footerLinks}>
           <a
-            href="https://app.logym.fit/"
+            href={appCtaUrl(pathname)}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.footerLink}
+            onClick={() => trackCtaClick(CTA_LOCATION.caseStudy, pathname)}
           >
             Visit the App
           </a>

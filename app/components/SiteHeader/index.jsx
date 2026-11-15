@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { CTA_URL } from '@/lib/site';
+import AppCtaLink from '@/app/components/AppCtaLink';
+import { CTA_LOCATION } from '@/lib/analytics';
 import styles from './style.module.scss';
 
 export default function SiteHeader({ variant = 'site', current }) {
@@ -16,9 +17,9 @@ export default function SiteHeader({ variant = 'site', current }) {
           Blog
         </Link>
         {variant === 'site' ? (
-          <a className={styles.cta} href={CTA_URL} target="_blank" rel="noopener noreferrer">
+          <AppCtaLink className={styles.cta} location={CTA_LOCATION.header}>
             Log a workout
-          </a>
+          </AppCtaLink>
         ) : null}
       </nav>
     </header>

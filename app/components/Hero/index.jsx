@@ -1,11 +1,14 @@
 "use client";
+import { usePathname } from "next/navigation";
 import styles from "./style.module.scss";
 import { useImmediateAnimation } from "../../hooks/useScrollAnimation";
 import Button from "../Button"; // ייבוא רכיב הכפתור החדש
 import SiteHeader from "../SiteHeader";
+import { CTA_LOCATION, appCtaUrl, trackCtaClick } from "@/lib/analytics";
 
 export default function Hero() {
   const textRef = useImmediateAnimation(300);
+  const pathname = usePathname() || "/";
 
   return (
     <section className={styles.hero}>
@@ -37,11 +40,12 @@ export default function Hero() {
             Everything you need to focus on what truly matters – your progress.
           </p>
           <Button 
-            href="https://app.logym.fit/" 
+            href={appCtaUrl(pathname)}
             className="animate-on-scroll" 
             data-stagger="3"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackCtaClick(CTA_LOCATION.landingHero, pathname)}
           >
             Start Seeing Results
           </Button>
