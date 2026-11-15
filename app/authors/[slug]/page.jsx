@@ -98,6 +98,7 @@ export default async function AuthorPage({ params }) {
                 </h3>
                 <p className={styles.meta}>
                   <time dateTime={post.datePublished}>{formatDate(post.datePublished)}</time>
+                  {post.draft ? <span className={styles.flag}>Placeholder draft</span> : null}
                 </p>
                 <p className={styles.summary}>{post.description}</p>
               </li>

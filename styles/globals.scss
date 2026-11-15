@@ -17,8 +17,6 @@
   --color-track: #{$color-track};
   --text-article: #{$color-text-article};
 
-  --font-sans: #{$font-family-sans};
-  --font-mono: #{$font-family-mono};
   --font-size-xs: #{$font-size-xs};
   --font-size-sm: #{$font-size-sm};
   --font-size-base: #{$font-size-base};
@@ -78,9 +76,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 body {
+  // next/font sets --font-geist-sans on body, not on :root, so the stack is
+  // declared here. This is the same font-family main compiles for the landing page.
+  --font-sans: var(--font-geist-sans), Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
   background: $background-color;
   color: $text-color;
-  font-family: var(--font-sans);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
   margin: 0;
   padding: 0;
   direction: ltr;

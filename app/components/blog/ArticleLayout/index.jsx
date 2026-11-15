@@ -25,7 +25,7 @@ export default function ArticleLayout({ post, author }) {
       {showFaq ? <JsonLd data={faqSchema(post.faq)} /> : null}
       <Breadcrumbs items={crumbs} />
       {post.draft ? (
-        <p className={styles.draft}>Draft. This preview is hidden in production.</p>
+        <p className={styles.draft}>Placeholder draft. Shown on preview and in development. Hidden on the production site.</p>
       ) : null}
       <header>
         <h1 className={styles.title}>{post.title}</h1>

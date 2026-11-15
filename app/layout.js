@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import JsonLd from "./components/blog/JsonLd";
 import { organizationSchema } from "@/lib/schema";
-import { SITE_URL } from "@/lib/site";
+import { isPreviewDeployment, SITE_URL } from "@/lib/site";
 import '../styles/globals.scss';
 
 const geistSans = Geist({
@@ -26,6 +26,10 @@ export const metadata = {
     shortcut: '/logym.svg',
     apple: '/logym.svg',
   },
+  // Preview URLs are public enough to be crawled. Keep them out of the index.
+  ...(isPreviewDeployment()
+    ? { robots: { index: false, follow: false } }
+    : {}),
 };
 
 export default function RootLayout({ children }) {

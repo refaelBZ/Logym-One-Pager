@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Breadcrumbs from '../components/blog/Breadcrumbs';
 import JsonLd from '../components/blog/JsonLd';
-import { formatDate, getPublishedPosts } from '@/lib/blog';
+import { formatDate, getRenderablePosts } from '@/lib/blog';
 import { breadcrumbSchema } from '@/lib/schema';
 import { absoluteUrl, DEFAULT_OG_IMAGE, SITE_NAME } from '@/lib/site';
 import styles from './blog.module.scss';
@@ -43,7 +43,7 @@ export const metadata = {
 };
 
 export default function BlogIndexPage() {
-  const posts = getPublishedPosts();
+  const posts = getRenderablePosts();
   const crumbs = [
     { name: 'Home', path: '/' },
     { name: 'Blog' },
@@ -67,6 +67,7 @@ export default function BlogIndexPage() {
                 </h2>
                 <p className={styles.meta}>
                   <time dateTime={post.datePublished}>{formatDate(post.datePublished)}</time>
+                  {post.draft ? <span className={styles.flag}>Placeholder draft</span> : null}
                 </p>
                 <p className={styles.summary}>{post.description}</p>
               </article>
