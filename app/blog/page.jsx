@@ -72,18 +72,20 @@ export default function BlogIndexPage() {
                     src={post.heroImage.src}
                     alt={post.heroImage.alt}
                     fill
-                    sizes={`(max-width: ${BREAKPOINT_MD}px) 100vw, 960px`}
+                    sizes={`(max-width: ${BREAKPOINT_MD}px) 112px, 180px`}
                     priority={index === 0}
                   />
                 </div>
-                <h2 className={styles.cardTitle}>
-                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                </h2>
-                <p className={styles.meta}>
-                  <time dateTime={post.datePublished}>{formatDate(post.datePublished)}</time>
-                  {post.draft ? <span className={styles.flag}>Placeholder draft</span> : null}
-                </p>
-                <p className={styles.summary}>{post.description}</p>
+                <div className={styles.cardBody}>
+                  <h2 className={styles.cardTitle}>
+                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                  </h2>
+                  <p className={styles.meta}>
+                    <time dateTime={post.datePublished}>{formatDate(post.datePublished)}</time>
+                    {post.draft ? <span className={styles.flag}>Placeholder draft</span> : null}
+                  </p>
+                  <p className={styles.summary}>{post.description}</p>
+                </div>
               </article>
             </li>
           ))}

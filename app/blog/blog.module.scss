@@ -41,7 +41,11 @@
 }
 
 .card {
-  padding: var(--space-24);
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  column-gap: var(--space-20);
+  align-items: center;
+  padding: var(--space-16) var(--space-20);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background: var(--color-surface);
@@ -49,10 +53,18 @@
 
 .thumbWrap {
   position: relative;
+  width: 100%;
   overflow: hidden;
-  margin-bottom: var(--space-16);
   border-radius: var(--radius-md);
   background: var(--color-bg);
+}
+
+.cardBody {
+  min-width: 0;
+}
+
+.card .summary {
+  margin-top: var(--space-8);
 }
 
 .thumb {
@@ -104,5 +116,11 @@
 
   .title {
     font-size: var(--font-size-lg);
+  }
+
+  .card {
+    grid-template-columns: 112px minmax(0, 1fr);
+    column-gap: var(--space-12);
+    padding: var(--space-12);
   }
 }
