@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { CLUSTERS, formatDate, sourceIncludesCta } from '@/lib/blog';
+import { CLUSTERS, formatDate, heroPhotoCredit, sourceIncludesCta } from '@/lib/blog';
 import { MdxContent } from '@/lib/mdx';
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { BREAKPOINT_MD, CONTENT_WIDTH } from '@/lib/site';
@@ -17,6 +17,8 @@ export default function ArticleLayout({ post, author }) {
     { name: post.title },
   ];
   const showFaq = post.faq.length > 0;
+  const creditText = heroPhotoCredit(post.heroImage, post.heroImageCredit);
+  const showCaption = Boolean(post.heroImage.caption || creditText);
 
   return (
     <article className={styles.article}>
@@ -42,19 +44,31 @@ export default function ArticleLayout({ post, author }) {
         </p>
         <p className={styles.topic}>{CLUSTERS[post.cluster]}</p>
       </header>
-      <div className={styles.hero}>
-        <Image
-          className={styles.heroImage}
-          src={post.heroImage.src}
-          alt={post.heroImage.alt}
-          width={post.heroImage.width}
-          height={post.heroImage.height}
-          priority
-          fetchPriority="high"
-          sizes={`(max-width: ${BREAKPOINT_MD}px) 100vw, ${CONTENT_WIDTH}px`}
-          style={{ width: '100%', height: 'auto' }}
-        />
-      </div>
+      <figure className={styles.hero}>
+        <div className={styles.heroFrame}>
+          <Image
+            className={styles.heroImage}
+            src={post.heroImage.src}
+            alt={post.heroImage.alt}
+            width={post.heroImage.width}
+            height={post.heroImage.height}
+            priority
+            fetchPriority="high"
+            sizes={`(max-width: ${BREAKPOINT_MD}px) 100vw, ${CONTENT_WIDTH}px`}
+            style={{ width: '100%', height: 'auto' }}
+          />
+        </div>
+        {showCaption ? (
+          <figcaption className={styles.figcaption}>
+            {post.heroImage.caption ? <span>{post.heroImage.caption}</span> : null}
+            {creditText ? (
+              <a href={post.heroImageCredit.url} target="_blank" rel="noopener noreferrer">
+                {creditText}
+              </a>
+            ) : null}
+          </figcaption>
+        ) : null}
+      </figure>
       <div className={styles.body}>
         <MdxContent source={post.content} />
       </div>

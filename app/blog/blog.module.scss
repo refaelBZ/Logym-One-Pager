@@ -47,6 +47,18 @@
   background: var(--color-surface);
 }
 
+.thumbWrap {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--space-16);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.thumb {
+  object-fit: cover;
+}
+
 .cardTitle {
   color: var(--color-text-strong);
   font-size: var(--font-size-lg);

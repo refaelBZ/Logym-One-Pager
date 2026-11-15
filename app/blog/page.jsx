@@ -1,9 +1,10 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumbs from '../components/blog/Breadcrumbs';
 import JsonLd from '../components/blog/JsonLd';
 import { formatDate, getRenderablePosts } from '@/lib/blog';
 import { breadcrumbSchema } from '@/lib/schema';
-import { absoluteUrl, DEFAULT_OG_IMAGE, SITE_NAME } from '@/lib/site';
+import { absoluteUrl, BREAKPOINT_MD, DEFAULT_OG_IMAGE, SITE_NAME } from '@/lib/site';
 import styles from './blog.module.scss';
 
 const title = 'Strength Training Guides';
@@ -59,9 +60,22 @@ export default function BlogIndexPage() {
         <p className={styles.empty}>No articles published yet. New guides are on the way.</p>
       ) : (
         <ul className={styles.list}>
-          {posts.map((post) => (
+          {posts.map((post, index) => (
             <li key={post.slug}>
               <article className={styles.card}>
+                <div
+                  className={styles.thumbWrap}
+                  style={{ aspectRatio: `${post.heroImage.width} / ${post.heroImage.height}` }}
+                >
+                  <Image
+                    className={styles.thumb}
+                    src={post.heroImage.src}
+                    alt={post.heroImage.alt}
+                    fill
+                    sizes={`(max-width: ${BREAKPOINT_MD}px) 100vw, 960px`}
+                    priority={index === 0}
+                  />
+                </div>
                 <h2 className={styles.cardTitle}>
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h2>
