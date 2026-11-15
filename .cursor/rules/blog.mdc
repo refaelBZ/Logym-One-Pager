@@ -1,0 +1,51 @@
+---
+description: when adding or editing blog posts
+alwaysApply: false
+---
+
+# Blog posts
+
+Posts live in `content/blog/<slug>.mdx`. Authors live in `content/authors/<slug>.json` with `slug`, `name`, `role`, `bio`, and `image` (`src`, `alt`, `width`, `height`). The MDX filename must equal frontmatter `slug`. A mismatch fails the build. Titles and descriptions must be unique.
+
+Required frontmatter: `title`, `description`, `slug`, `datePublished`, `dateModified` (`YYYY-MM-DD`), `author` (must match an author file), `cluster`, `pillar` (`true` or `false`), `heroImage` (`src`, `alt`, `width`, `height`). `draft` defaults to false. Optional: `tags`, `heroImage.caption`, `faq` (array of `{ question, answer }`), `canonical`, and `heroImageCredit` (required for a remote hero).
+
+Clusters: `logging`, `overload`, `programs`, `standards`, `plateaus`, `beginners`.
+
+```yaml
+title: "Why You Should Write Down Your Workouts"
+slug: why-write-down-your-workouts
+datePublished: "2026-06-24"
+dateModified: "2026-06-24"
+author: logan-myers
+cluster: logging
+pillar: false
+heroImage:
+  src: "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=630"
+  alt: "A loaded barbell resting on the floor of an empty, dimly lit gym"
+  width: 1200
+  height: 630
+heroImageCredit:
+  photographer: "Leon Mart"
+  url: "https://www.pexels.com/photo/barbell-on-the-floor-1552252/"
+draft: false
+```
+
+Drafts render in `next dev` and when `VERCEL_ENV=preview`. They are hidden when `VERCEL_ENV=production` and on a local production build (`NODE_ENV=production` and `VERCEL_ENV` unset). Sitemap and RSS use published posts only, including on preview.
+
+`heroImage.src` is a file under `public/` that exists, or an `https` URL on `images.unsplash.com` or `images.pexels.com` (see `images.remotePatterns` in `next.config.mjs`). A remote hero needs `width`, `height`, `alt`, and `heroImageCredit` with `photographer` and an `https` photo-page `url`. Quote any URL that contains `&`.
+
+The article layout adds one `<CtaBlock>` (link to `https://app.logym.fit/`) unless the MDX already includes `<CtaBlock>`. Child text replaces the default sentence.
+
+`/sitemap.xml` and `/blog/rss.xml` pick up published posts on build. Do not edit them by hand.
+
+## Adding a batch
+
+Copy the MDX files into `content/blog/` unchanged unless asked to edit one. Run `npm run build`. Check that every internal `/blog/...` link has a generated page, and that each new slug appears on `/blog`, in the sitemap, and in the RSS feed. Confirm remote hero URLs return HTTP 200.
+
+## Leave alone
+
+Do not change design tokens, landing or blog layout, styles, or posts that are already live unless the task says so. English only. Do not mention a mobile app or the App Store. Do not use em dashes or en dashes in new copy.
+
+## Review
+
+A PR that only adds or edits `content/blog` or `content/authors` may be merged without owner review. A PR that changes code or design stays open for owner review.
