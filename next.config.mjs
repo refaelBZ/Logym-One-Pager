@@ -1,5 +1,3 @@
-const previewDeployment = process.env.VERCEL_ENV === 'preview';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -10,13 +8,25 @@ const nextConfig = {
     ],
   },
   async headers() {
-    if (!previewDeployment) return [];
+    // www.logym.fit stays indexable. Every other host this app serves
+    // (vercel.app aliases, preview URLs, localhost) gets noindex.
     return [
       {
         source: '/:path*',
-        headers: [
-          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
-        ],
+        missing: [{ type: 'host', value: 'www.logym.fit' }],
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
+    ];
+  },
+  async redirects() {
+    // 308, not 307. This runs only when the request reaches Next.js.
+    // Vercel's own apex redirect is answered at the edge and never gets here.
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'logym.fit' }],
+        destination: 'https://www.logym.fit/:path*',
+        permanent: true,
       },
     ];
   },
