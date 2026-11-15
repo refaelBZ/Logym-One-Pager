@@ -1,4 +1,6 @@
-import { CTA_TEXT, CTA_URL } from '@/lib/site';
+import AppCtaLink from '@/app/components/AppCtaLink';
+import { CTA_LOCATION } from '@/lib/analytics';
+import { CTA_TEXT } from '@/lib/site';
 import styles from './style.module.scss';
 
 export default function CtaBlock({ children }) {
@@ -7,14 +9,9 @@ export default function CtaBlock({ children }) {
   return (
     <aside className={styles.cta}>
       <p className={styles.text}>{text}</p>
-      <a
-        className={styles.button}
-        href={CTA_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <AppCtaLink className={styles.button} location={CTA_LOCATION.blogPost}>
         Log a workout
-      </a>
+      </AppCtaLink>
     </aside>
   );
 }

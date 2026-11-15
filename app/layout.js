@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import JsonLd from "./components/blog/JsonLd";
 import { organizationSchema } from "@/lib/schema";
 import { isPreviewDeployment, SITE_URL } from "@/lib/site";
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <GoogleAnalytics />
         <JsonLd data={organizationSchema()} />
         {children}
       </body>
