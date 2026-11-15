@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
+  background: rgba($color-black, 0.1);
+  border-radius: $radius-12;
   padding: 10px;
 }
 
@@ -17,7 +17,7 @@
 
 .progressPath {
   transition: stroke-dashoffset 0.1s ease-out;
-  filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.5));
+  filter: drop-shadow(0 0 8px rgba($color-progress, 0.5));
 }
 
 .percentageText {
@@ -27,11 +27,11 @@
   transform: translate(-50%, -50%);
   font-size: 1.2rem;
   font-weight: bold;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: $color-white;
+  text-shadow: 0 2px 4px rgba($color-black, 0.5);
   z-index: 10;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 8px 12px;
+  background: rgba($color-black, 0.7);
+  padding: $space-8 $space-12;
   border-radius: 20px;
   backdrop-filter: blur(10px);
 }
@@ -55,10 +55,10 @@
 // אפקט זוהר לנתיב ההתקדמות
 @keyframes glow {
   0%, 100% {
-    filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.5));
+    filter: drop-shadow(0 0 8px rgba($color-progress, 0.5));
   }
   50% {
-    filter: drop-shadow(0 0 15px rgba(0, 255, 136, 0.8));
+    filter: drop-shadow(0 0 15px rgba($color-progress, 0.8));
   }
 }
 
@@ -67,9 +67,9 @@
 }
 
 // רספונסיביות
-@media (max-width: 768px) {
+@media (max-width: $bp-md) {
   .progressBarContainer {
-    padding: 8px;
+    padding: $space-8;
   }
   
   .percentageText {

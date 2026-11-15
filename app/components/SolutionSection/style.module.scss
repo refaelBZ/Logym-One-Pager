@@ -3,7 +3,7 @@
 
 .solutionSection {
   background: $main-color;
-  padding: 100px 20px;
+  padding: $space-100 $space-20;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@
 
 .intro {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: $space-80;
   max-width: 650px;
 }
 
@@ -60,12 +60,12 @@
 }
 
 .mockup {
-  margin-bottom: 24px;
+  margin-bottom: $space-24;
   img {
     width: 100%;
     max-width: 250px;
-    border-radius: 24px;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: $radius-24;
+    box-shadow: 0px 20px 40px rgba($color-black, 0.2);
   }
 }
 
@@ -73,7 +73,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: $space-20;
   justify-content: flex-start;
 }
 
@@ -92,7 +92,7 @@
   font-size: 1.8rem;
   font-weight: $font-weight-bold;
   color: $background-color;
-  margin-bottom: 12px;
+  margin-bottom: $space-12;
   text-align: left;
 }
 
@@ -105,7 +105,7 @@
   text-align: start;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bp-md) {
   .graphContainer {
     height: auto; // גובה אוטומטי במובייל
     flex-direction: column;

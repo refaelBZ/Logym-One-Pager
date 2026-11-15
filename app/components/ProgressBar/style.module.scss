@@ -1,10 +1,10 @@
 @import "../../../styles/vars";
 
 .bar {
-  height: 8px;
+  height: $space-8;
   width: 100%;
   background-color: $border-color;
-  border-radius: 15px;
+  border-radius: $radius-15;
   position: relative;
   overflow: hidden;
 }
@@ -12,6 +12,6 @@
 .fill {
   height: 100%;
   background-color: $main-color;
-  border-radius: 15px;
+  border-radius: $radius-15;
   transition: width 0.3s ease-in-out;
 }

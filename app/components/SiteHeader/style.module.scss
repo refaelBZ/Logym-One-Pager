@@ -1,0 +1,82 @@
+@import '../../../styles/vars';
+@import '../../../styles/mixins';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: $header-height;
+  padding: 0 $space-20;
+  z-index: 100;
+}
+
+.landing {
+  top: 0;
+  border-bottom-left-radius: $radius-15;
+  border-bottom-right-radius: $radius-15;
+}
+
+.site {
+  position: sticky;
+  top: 0;
+  background: $background-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.logo {
+  color: $color-white;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-normal;
+  letter-spacing: $tracking-logo;
+  text-decoration: none;
+}
+
+.logo:focus-visible,
+.link:focus-visible,
+.cta:focus-visible {
+  outline: 2px solid $main-color;
+  outline-offset: 3px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: $space-24;
+}
+
+.link {
+  color: $color-white;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.link:hover,
+.site .link[aria-current='page'] {
+  color: $main-color;
+}
+
+.cta {
+  @include button-premium;
+  display: inline-flex;
+  align-items: center;
+  padding: $space-8 $space-16;
+  border-radius: $radius-12;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: $font-size-sm;
+  line-height: $line-height-tight;
+  white-space: nowrap;
+}
+
+@media (max-width: $bp-md) {
+  .site {
+    padding: 0 $space-12;
+  }
+
+  .site .nav {
+    gap: $space-12;
+  }
+}

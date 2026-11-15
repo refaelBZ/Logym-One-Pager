@@ -1,0 +1,14 @@
+.callout {
+  margin-top: var(--space-24);
+  padding: var(--space-16) var(--space-20);
+  border: 1px solid var(--color-border);
+  border-left: var(--space-4) solid var(--color-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--text-article);
+  line-height: var(--line-height-relaxed);
+
+  p + p {
+    margin-top: var(--space-12);
+  }
+}

@@ -1,14 +1,38 @@
-// צבעים
-$main-color: #eaff00;
-$background-color: #1A1A1A;
-$dark-gray: #242424;
-$gray-color: #D9D9D9;
-$border-color: #424242;
-$text-color: #98989c;
+// Shared design tokens for the landing page and the blog.
+// Existing names ($main-color, $background-color, and the rest) stay so
+// current rules compile to the same CSS.
+
+// Colors
+$color-bg: #1A1A1A;
+$color-surface: #242424;
+$color-accent: #eaff00;
+$color-text: #98989c;
+$color-text-muted: #D9D9D9;
+$color-border: #424242;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-dim: #666666;
+$color-highlight: #ff0;
+$color-progress: #00ff88;
+$color-track: #333333;
+// Marketing gray is about 6:1 on the background. Long articles use a lighter body color.
+$color-text-article: #e8e8ea;
+
+$main-color: $color-accent;
+$background-color: $color-bg;
+$dark-gray: $color-surface;
+$gray-color: $color-text-muted;
+$border-color: $color-border;
+$text-color: $color-text;
+$text-article: $color-text-article;
+
+// Layout
 $footer-height: 80px;
 $header-height: 64px;
+$content-width: 720px;
+$content-wide: 960px;
 
-// טיפוגרפיה
+// Typography
 $font-size-xs: 12px;
 $font-size-sm: 14px;
 $font-size-base: 16px;
@@ -25,3 +49,42 @@ $font-weight-bold: 800;
 $line-height-tight: 1.2;
 $line-height-normal: 1.5;
 $line-height-relaxed: 1.7;
+$tracking-logo: 1px;
+
+$font-family-sans: var(--font-geist-sans), Arial, sans-serif;
+$font-family-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+// Spacing
+$space-4: 4px;
+$space-5: 5px;
+$space-8: 8px;
+$space-12: 12px;
+$space-15: 15px;
+$space-16: 16px;
+$space-18: 18px;
+$space-20: 20px;
+$space-24: 24px;
+$space-30: 30px;
+$space-32: 32px;
+$space-40: 40px;
+$space-48: 48px;
+$space-56: 56px;
+$space-64: 64px;
+$space-80: 80px;
+$space-100: 100px;
+
+// Radii
+$radius-5: 5px;
+$radius-12: 12px;
+$radius-15: 15px;
+$radius-24: 24px;
+$radius-36: 36px;
+$radius-sm: $radius-5;
+$radius-md: $radius-12;
+$radius-lg: $radius-15;
+$radius-xl: $radius-24;
+
+// Breakpoints
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-stack: 900px;

@@ -2,7 +2,7 @@
 import styles from "./style.module.scss";
 import { useImmediateAnimation } from "../../hooks/useScrollAnimation";
 import Button from "../Button"; // ייבוא רכיב הכפתור החדש
-import Header from "../Header";
+import SiteHeader from "../SiteHeader";
 
 export default function Hero() {
   const textRef = useImmediateAnimation(300);
@@ -24,7 +24,7 @@ export default function Hero() {
         <div className={styles.bgImage} />
       </video>
       <div className={styles.overlay} />
-      <Header />
+      <SiteHeader variant="landing" current="home" />
       <div className={styles.heroContent}>
         <div className={styles.textWrapper} ref={textRef}>
           <h1 className={`${styles.title} animate-on-scroll`} data-stagger="0">

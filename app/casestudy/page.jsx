@@ -8,7 +8,9 @@ const assistant = Assistant({
 });
 
 export const metadata = {
-  title: 'Logym Case Study - From Product to Promise',
+  title: {
+    absolute: 'Logym Case Study - From Product to Promise',
+  },
   description: 'The Logym One-Pager Case Study - A comprehensive look at building a SaaS landing page',
   keywords: 'SaaS, landing page, case study, web design, UI/UX, fitness app, Logym',
   openGraph: {

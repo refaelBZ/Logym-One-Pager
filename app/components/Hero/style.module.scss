@@ -14,8 +14,8 @@
   object-fit: cover;
   object-position: center;
   z-index: 0;
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: $radius-24;
+  border-bottom-right-radius: $radius-24;
   @include ken-burns-effect;
 }
 
@@ -29,8 +29,8 @@
   background-size: cover;
   background-position: center;
   z-index: 0;
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: $radius-24;
+  border-bottom-right-radius: $radius-24;
   @include ken-burns-effect;
 }
 
@@ -40,7 +40,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(26,26,26,0.68); // כהות קלה מעל התמונה
+  background: rgba($background-color,0.68); // כהות קלה מעל התמונה
   z-index: 1;
 }
 
@@ -67,8 +67,8 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 64px 48px 48px 48px; /* padding פנימי במקום ב-hero */
-  min-height:calc(100vh - $header-height); /* תואם ל-hero */
+  padding: $space-64 $space-48 $space-48 $space-48; /* padding פנימי במקום ב-hero */
+  min-height: calc(100vh - $header-height); /* תואם ל-hero */
 }
 
 .textWrapper {
@@ -87,16 +87,16 @@
 .title {
   font-size: 3.2rem;
   font-weight: $font-weight-bold;
-  color: white;
-  margin-bottom: 18px;
+  color: $color-white;
+  margin-bottom: $space-18;
   line-height: 1.1;
 }
 
 .subtitle {
   font-size: $font-size-lg;
-  color: white;
+  color: $color-white;
   font-weight: $font-weight-light;
-  margin-bottom: 12px;
+  margin-bottom: $space-12;
   line-height: $line-height-normal;
 }
 
@@ -104,7 +104,7 @@
   font-size: $font-size-base;
   color: $text-color;
   font-weight: $font-weight-light;
-  margin-bottom: 32px;
+  margin-bottom: $space-32;
   line-height: $line-height-relaxed;
   max-width: 450px;
 }
@@ -113,8 +113,8 @@
   width: 320px;
   height: 200px;
   background: $background-color;
-  border-radius: 15px;
-  margin-bottom: 32px;
+  border-radius: $radius-15;
+  margin-bottom: $space-32;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,16 +130,16 @@
   100% { transform: translateY(0px); }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $bp-lg) {
   .title {
     font-size: 3.8rem;
   }
 } 
 
-@media (max-width: 768px) {
+@media (max-width: $bp-md) {
     .heroContent{
         width: auto;
-        padding: 20px
+        padding: $space-20
     }
     .textWrapper{
       width: 80vw;

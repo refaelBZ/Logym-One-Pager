@@ -1,0 +1,32 @@
+@import '../../../../styles/mixins';
+
+.cta {
+  margin-top: var(--space-40);
+  padding: var(--space-24);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.text {
+  color: var(--text-article);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}
+
+.button {
+  @include button-premium;
+  display: inline-block;
+  margin-top: var(--space-20);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+
+.cta .button {
+  color: var(--color-bg);
+  text-decoration: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}

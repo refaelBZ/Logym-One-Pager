@@ -5,17 +5,17 @@ import { FiHelpCircle, FiClock, FiBarChart2 } from "react-icons/fi";
 
 const problems = [
   {
-    icon: <FiHelpCircle size={48} color="#eaff00" strokeWidth={2} />,
+    icon: <FiHelpCircle size={48} strokeWidth={2} />,
     title: "Memory betrays you at the worst time?",
     text: "Can't remember the weights from last week's session? Or that final set?"
   },
   {
-    icon: <FiClock size={48} color="#eaff00" strokeWidth={2} />,
+    icon: <FiClock size={48} strokeWidth={2} />,
     title: "Is your workout time spent on guesswork?",
     text: "Every minute in the gym is valuable. Your focus should be on lifting, not calculating."
   },
   {
-    icon: <FiBarChart2 size={48} color="#eaff00" strokeWidth={2} />,
+    icon: <FiBarChart2 size={48} strokeWidth={2} />,
     title: "All the effort, but no visible results?",
     text: "It's time to turn your hard work into progress you can actually see and feel."
   }
