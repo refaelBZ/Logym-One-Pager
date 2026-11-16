@@ -34,7 +34,7 @@ export default function ProblemSection() {
       <div className={styles.cards} ref={cardsRef}>
         {problems.map((item, idx) => (
           <div className={`${styles.card} animate-on-scroll`} key={idx} data-stagger={idx}>
-            <div className={styles.icon} aria-hidden="true">{item.icon}</div>
+            <div className={styles.icon}>{item.icon}</div>
             <h3 className={styles.cardTitle}>{item.title}</h3>
             <p className={styles.cardText}>{item.text}</p>
           </div>

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import AppCtaLink from '@/app/components/AppCtaLink';
 import { CTA_LOCATION } from '@/lib/analytics';
 import { CTA_TEXT } from '@/lib/site';
@@ -9,15 +8,10 @@ export default function CtaBlock({ children }) {
 
   return (
     <aside className={styles.cta}>
-      <div className={styles.text}>{text}</div>
+      <p className={styles.text}>{text}</p>
       <AppCtaLink className={styles.button} location={CTA_LOCATION.blogPost}>
         Log a workout
       </AppCtaLink>
-      <p className={styles.legalNote}>
-        <Link href="/privacy">Privacy Policy</Link>
-        {' · '}
-        <Link href="/cookies">Cookies</Link>
-      </p>
     </aside>
   );
 }

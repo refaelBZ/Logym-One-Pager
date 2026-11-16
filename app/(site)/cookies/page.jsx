@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import LegalDocument from '@/app/components/LegalDocument';
-import { COOKIE_CONSENT_KEY, PRIVACY_EMAIL } from '@/lib/legal';
+import { PRIVACY_EMAIL } from '@/lib/legal';
 import { legalMetadata } from '@/lib/legal-pages';
-import CookiePreferences from './CookiePreferences';
 
 export const metadata = legalMetadata({
   title: 'Cookie Policy',
@@ -20,8 +19,8 @@ export default function CookiesPage() {
       <h2>1. Summary</h2>
       <p>
         The marketing site (<strong>www.logym.fit</strong>) can use Google
-        Analytics 4, which sets non-essential cookies/identifiers. We load
-        analytics only after you choose <strong>Accept analytics</strong>.
+        Analytics 4, which sets non-essential cookies/identifiers to understand
+        aggregated traffic and CTA clicks.
       </p>
       <p>
         The workout app (<strong>app.logym.fit</strong>) primarily uses browser{' '}
@@ -31,18 +30,19 @@ export default function CookiesPage() {
       </p>
 
       <h2>2. Manage your choice</h2>
-      <CookiePreferences />
+      <p>
+        You can control cookies and site data through your browser settings
+        (block third-party cookies, clear site data, or use a tracking-protection
+        mode). Clearing data for this site removes analytics identifiers stored
+        by Google Analytics in your browser.
+      </p>
+      <p>
+        For questions about cookies or analytics on this site, contact{' '}
+        <a href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a>.
+      </p>
 
       <h2>3. Marketing site (www.logym.fit)</h2>
-      <h3>Essential</h3>
-      <ul>
-        <li>
-          <strong>Cookie consent preference</strong> — stored in{' '}
-          <code>localStorage</code> key <code>{COOKIE_CONSENT_KEY}</code> so we
-          remember whether you accepted or rejected analytics.
-        </li>
-      </ul>
-      <h3>Analytics (optional, consent required)</h3>
+      <h3>Analytics</h3>
       <ul>
         <li>
           <strong>Google Analytics 4</strong> (measurement ID configured for
@@ -54,6 +54,8 @@ export default function CookiesPage() {
       <p>
         We do not use a Google Tag Manager container on this site. Analytics
         scripts are omitted in development and on Vercel preview deployments.
+        On the production host (<code>www.logym.fit</code>), the analytics
+        snippet loads with the page.
       </p>
 
       <h2>4. App (app.logym.fit)</h2>

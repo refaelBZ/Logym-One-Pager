@@ -12,11 +12,8 @@
   text-decoration: none;
 }
 
-.skip:focus,
-.skip:focus-visible {
+.skip:focus {
   transform: none;
-  outline: 2px solid var(--color-white);
-  outline-offset: 3px;
 }
 
 .main {
