@@ -75,14 +75,23 @@ export default function CookiesPage() {
         workout resume state.
       </p>
 
-      <h2>5. Other technologies</h2>
+      <h2>5. Fonts and similar assets</h2>
+      <p>
+        This marketing site uses the Geist typeface via Next.js{' '}
+        <code>next/font</code>. Font files are self-hosted from this site’s own
+        origin (<code>/_next/static/media/</code>). Visiting the site does{' '}
+        <strong>not</strong> load fonts from fonts.google.com or another Google
+        CDN for typography.
+      </p>
+
+      <h2>6. Other technologies</h2>
       <p>
         Our hosts (for example Vercel) and security layers may process technical
         data such as IP addresses in server logs. Those are operational, not
         advertising cookies set by Logym.
       </p>
 
-      <h2>6. More information</h2>
+      <h2>7. More information</h2>
       <p>
         See the <Link href="/privacy">Privacy Policy</Link> for how personal
         data is handled. Questions:{' '}

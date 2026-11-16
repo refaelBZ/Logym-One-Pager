@@ -20,7 +20,7 @@ export default function AccessibilityPage() {
         Logym aims to make the marketing site (www.logym.fit) and the workout
         app (app.logym.fit) usable for people with diverse abilities. We use
         semantic HTML, keyboard-focus styles, and a “Skip to content” link on
-        site pages that use the shared shell.
+        the landing page and on site pages that use the shared shell.
       </p>
 
       <h2>2. Conformance target</h2>
@@ -35,6 +35,8 @@ export default function AccessibilityPage() {
         <li>Some older interactive flows in the app may need further keyboard and screen-reader testing.</li>
         <li>Chart visualizations may be harder to interpret with assistive technology; we aim to keep underlying numbers available in the UI where possible.</li>
         <li>Third-party embeds or analytics scripts (when enabled) are outside our full control.</li>
+        <li>The optional case-study page still needs English control labels and contrast polish.</li>
+        <li>This statement is not a claim of full WCAG 2.2 AA conformance; a formal audit is still outstanding.</li>
       </ul>
 
       <h2>4. Feedback</h2>

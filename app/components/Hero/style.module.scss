@@ -109,6 +109,24 @@
   max-width: 450px;
 }
 
+.legalNote {
+  margin-top: $space-16;
+  max-width: 450px;
+  color: $text-color;
+  font-size: $font-size-sm;
+  line-height: $line-height-relaxed;
+}
+
+.legalNote a {
+  color: $main-color;
+  text-underline-offset: 0.15em;
+}
+
+.legalNote a:focus-visible {
+  outline: 2px solid $main-color;
+  outline-offset: 3px;
+}
+
 .visualPlaceholder {
   width: 320px;
   height: 200px;

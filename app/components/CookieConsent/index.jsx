@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import Link from 'next/link';
 import { COOKIE_CONSENT, COOKIE_CONSENT_KEY } from '@/lib/legal';
 import { loadGoogleAnalytics, unloadGoogleAnalytics } from '@/lib/analytics';
@@ -25,6 +25,9 @@ function writeConsent(value) {
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
+  const titleId = useId();
+  const descId = useId();
+  const rejectRef = useRef(null);
 
   useEffect(() => {
     const existing = readConsent();
@@ -41,6 +44,11 @@ export default function CookieConsent() {
     setVisible(true);
   }, []);
 
+  useEffect(() => {
+    if (!visible || !rejectRef.current) return;
+    rejectRef.current.focus();
+  }, [visible]);
+
   const accept = () => {
     writeConsent(COOKIE_CONSENT.accepted);
     loadGoogleAnalytics();
@@ -56,20 +64,33 @@ export default function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className={styles.banner} role="dialog" aria-labelledby="cookie-consent-title" aria-live="polite">
+    <div
+      className={styles.banner}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby={titleId}
+      aria-describedby={descId}
+    >
       <div className={styles.inner}>
         <div className={styles.copy}>
-          <p id="cookie-consent-title" className={styles.title}>
+          <p id={titleId} className={styles.title}>
             Cookies and analytics
           </p>
-          <p className={styles.text}>
+          <p id={descId} className={styles.text}>
             We use Google Analytics on this marketing site only if you allow it.
             Essential storage for the app (such as your login session) is separate.{' '}
             <Link href="/cookies">Cookie Policy</Link>
+            {' · '}
+            <Link href="/privacy">Privacy Policy</Link>
           </p>
         </div>
         <div className={styles.actions}>
-          <button type="button" className={styles.reject} onClick={reject}>
+          <button
+            ref={rejectRef}
+            type="button"
+            className={styles.reject}
+            onClick={reject}
+          >
             Essential only
           </button>
           <button type="button" className={styles.accept} onClick={accept}>

@@ -61,6 +61,24 @@
   line-height: $line-height-relaxed;
 }
 
+.legalNote {
+  margin-top: $space-20;
+  max-width: 420px;
+  color: $text-color;
+  font-size: $font-size-sm;
+  line-height: $line-height-relaxed;
+}
+
+.legalNote a {
+  color: $main-color;
+  text-underline-offset: 0.15em;
+}
+
+.legalNote a:focus-visible {
+  outline: 2px solid $main-color;
+  outline-offset: 3px;
+}
+
 @media (max-width: $bp-md) {
   .title {
     font-size: 2.2rem;
