@@ -5,7 +5,7 @@ import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 const steps = [
   {
     title: "Choose Your Workout",
-    desc: "Create your own workout plan from scratch and reuse it every session.",
+    desc: "Select from ready-made workout plans or create your own from scratch.",
     img: "/mockup-step1.png"
   },
   {
@@ -36,7 +36,7 @@ export default function SolutionSection() {
         {steps.map((step, idx) => (
           <div className={`${styles.stepNode} animate-on-scroll`} data-stagger={idx} key={idx}>
             <div className={styles.mockup}>
-              <img src={step.img} alt={step.title} width={778} height={900} />
+              <img src={step.img} alt={step.title} />
             </div>
             <div className={styles.content}>
               <div className={styles.stepNumber}>{idx + 1}</div>
