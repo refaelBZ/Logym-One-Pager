@@ -20,8 +20,12 @@
 
 .links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: $space-8;
+  max-width: 720px;
+  padding: 0 $space-16;
 }
 
 .link {

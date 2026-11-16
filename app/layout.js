@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import ConsentBanner from "./components/ConsentBanner";
+import CookieConsent from "./components/CookieConsent";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import JsonLd from "./components/blog/JsonLd";
 import { organizationSchema } from "@/lib/schema";
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <GoogleAnalytics />
+        <CookieConsent />
         {process.env.NEXT_PUBLIC_CONSENT_BANNER === "true" ? <ConsentBanner /> : null}
         <JsonLd data={organizationSchema()} />
         {children}

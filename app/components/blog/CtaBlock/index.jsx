@@ -8,7 +8,7 @@ export default function CtaBlock({ children }) {
 
   return (
     <aside className={styles.cta}>
-      <p className={styles.text}>{text}</p>
+      <div className={styles.text}>{text}</div>
       <AppCtaLink className={styles.button} location={CTA_LOCATION.blogPost}>
         Log a workout
       </AppCtaLink>
