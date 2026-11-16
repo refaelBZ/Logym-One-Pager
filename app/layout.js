@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import CookieConsent from "./components/CookieConsent";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import JsonLd from "./components/blog/JsonLd";
 import { organizationSchema } from "@/lib/schema";
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <GoogleAnalytics />
+        <CookieConsent />
         <JsonLd data={organizationSchema()} />
         {children}
       </body>
