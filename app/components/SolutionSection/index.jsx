@@ -5,7 +5,7 @@ import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 const steps = [
   {
     title: "Choose Your Workout",
-    desc: "Select from ready-made workout plans or create your own from scratch.",
+    desc: "Create your own workout plan from scratch and reuse it every session.",
     img: "/mockup-step1.png"
   },
   {

@@ -1,27 +1,33 @@
-import Script from 'next/script';
-import { GA_HOST, GA_MEASUREMENT_ID, shouldIncludeGaSnippet } from '@/lib/analytics';
+'use client';
 
-// GA4 gtag only. This is not a Google Tag Manager container.
+import { useEffect } from 'react';
+import { COOKIE_CONSENT, COOKIE_CONSENT_KEY } from '@/lib/legal';
+import { loadGoogleAnalytics, unloadGoogleAnalytics } from '@/lib/analytics';
+
+// GA4 loads only after the visitor accepts analytics cookies.
 export default function GoogleAnalytics() {
-  if (!shouldIncludeGaSnippet()) return null;
+  useEffect(() => {
+    const sync = () => {
+      try {
+        const consent = window.localStorage.getItem(COOKIE_CONSENT_KEY);
+        if (consent === COOKIE_CONSENT.accepted) {
+          loadGoogleAnalytics();
+        } else {
+          unloadGoogleAnalytics();
+        }
+      } catch {
+        unloadGoogleAnalytics();
+      }
+    };
 
-  const id = JSON.stringify(GA_MEASUREMENT_ID);
-  const host = JSON.stringify(GA_HOST);
+    sync();
+    window.addEventListener('logym-cookie-consent', sync);
+    window.addEventListener('storage', sync);
+    return () => {
+      window.removeEventListener('logym-cookie-consent', sync);
+      window.removeEventListener('storage', sync);
+    };
+  }, []);
 
-  return (
-    <Script id="ga4" strategy="afterInteractive">
-      {`(function () {
-        if (location.hostname !== ${host}) return;
-        var id = ${id};
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = function () { window.dataLayer.push(arguments); };
-        window.gtag('js', new Date());
-        window.gtag('config', id);
-      })();`}
-    </Script>
-  );
+  return null;
 }
