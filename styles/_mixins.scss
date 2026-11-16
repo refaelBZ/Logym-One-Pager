@@ -112,6 +112,11 @@
 
   }
 
+  &:focus-visible {
+    outline: 2px solid $color-white;
+    outline-offset: 3px;
+  }
+
   &:active {
     transform: scale(0.98); // אפקט לחיצה
   }
@@ -346,5 +351,23 @@
   
   &.animate-in {
     @include timeline-draw-active;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-scale,
+  .timeline-line {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .ken-burns,
+  .ken-burns-active {
+    transform: none !important;
+    transition: none !important;
   }
 }

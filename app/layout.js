@@ -1,5 +1,4 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import ConsentBanner from "./components/ConsentBanner";
 import CookieConsent from "./components/CookieConsent";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import JsonLd from "./components/blog/JsonLd";
@@ -7,6 +6,7 @@ import { organizationSchema } from "@/lib/schema";
 import { isPreviewDeployment, SITE_URL } from "@/lib/site";
 import '../styles/globals.scss';
 
+// next/font self-hosts these files from this origin (no Google Fonts CDN request at runtime).
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,7 +23,7 @@ export const metadata = {
     default: "Logym - Stop Checking Boxes. Start Seeing Results.",
     template: "%s | Logym",
   },
-  description: "The only fitness app with a revolutionary interface for logging workouts in seconds. Focus on what truly matters – your progress.",
+  description: "Logym is a fitness app with a fast interface for logging workouts in seconds. Focus on what truly matters – your progress.",
   icons: {
     icon: '/logym.svg',
     shortcut: '/logym.svg',
@@ -41,7 +41,6 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <GoogleAnalytics />
         <CookieConsent />
-        {process.env.NEXT_PUBLIC_CONSENT_BANNER === "true" ? <ConsentBanner /> : null}
         <JsonLd data={organizationSchema()} />
         {children}
       </body>

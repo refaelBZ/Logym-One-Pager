@@ -42,7 +42,10 @@ export default function BenefitsSection() {
                 <h3 className={styles.benefitTitle}>{item.title}</h3>
                 <p className={styles.benefitText}>{item.text}</p>
               </div>
-              <div className={`${styles.iconContainer} ${idx % 2 === 1 ? 'animate-slide-right' : 'animate-slide-left'}`}>
+              <div
+                className={`${styles.iconContainer} ${idx % 2 === 1 ? 'animate-slide-right' : 'animate-slide-left'}`}
+                aria-hidden="true"
+              >
                 {item.icon}
               </div>
             </div>

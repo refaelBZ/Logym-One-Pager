@@ -39,11 +39,17 @@ Last reviewed in-repo: 2026-11-16.
   (deletion helpers exist server-side but are not exposed for end users).
   Privacy Policy currently routes requests to email.
 - No in-app link to Privacy/Terms at signup yet (app repo is separate).
+  Marketing CTAs now link to Privacy/Cookies/Terms near the buttons.
 - OpenAI dependency is present but inactive; confirm it stays off or update
   Privacy Policy before enabling.
 - Marketing and blog previously claimed **ready-made workout plans**; the app
   only supports **user-created** plans. Landing CTA + Solution step copy were
-  fixed in this PR; remaining blog CTA phrases should be swept (see PR notes).
+  fixed earlier; absolute “only/revolutionary” claims were softened in the
+  compliance-critical PR. Remaining blog CTA phrases should be swept if needed.
+- Do **not** remount `ConsentBanner` while `CookieConsent` is live — they used
+  different storage keys. Live preference key is `logym_cookie_consent`.
+- See `COMPLIANCE-SCAN.md` for the 2026-11-16 legal / privacy / WCAG scan and
+  residual High/Medium items (entity, mailboxes, formal a11y audit, casestudy).
 
 ## Documents still needing human/lawyer review
 

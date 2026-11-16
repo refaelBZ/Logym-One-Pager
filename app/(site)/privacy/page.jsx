@@ -87,7 +87,12 @@ export default function PrivacyPage() {
         approximate usage data on <strong>www.logym.fit</strong> (pages viewed,
         device/browser information, approximate location derived by Google, and
         similar metrics). See the <Link href="/cookies">Cookie Policy</Link>.
-        Analytics are not loaded until you consent.
+        Analytics are not loaded until you consent. You can change your choice
+        anytime on the Cookie Policy page.
+      </p>
+      <p>
+        Site fonts (Geist) are self-hosted with the marketing site and are not
+        fetched from Google’s font CDN when you browse www.logym.fit.
       </p>
 
       <h3>What we do not currently collect</h3>

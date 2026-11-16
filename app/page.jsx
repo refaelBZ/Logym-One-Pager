@@ -6,11 +6,10 @@ import BenefitsSection from "./components/BenefitsSection";
 import ProgressSection from "./components/ProgressSection";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
-import Workout from "./components/Workout";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 const title = "Logym - Stop Checking Boxes. Start Seeing Results.";
-const description = "The only fitness app with a revolutionary interface for logging workouts in seconds. Focus on what truly matters – your progress.";
+const description = "Logym is a fitness app with a fast interface for logging workouts in seconds. Focus on what truly matters – your progress.";
 
 export const metadata = {
   alternates: {
@@ -41,12 +40,15 @@ export const metadata = {
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Hero />
-      <ProblemSection />
-      <SolutionSection />
-      <BenefitsSection />
-      <ProgressSection />
-      <FinalCTA />
+      <a className={styles.skip} href="#main">Skip to content</a>
+      <main id="main" className={styles.main} tabIndex={-1}>
+        <Hero />
+        <ProblemSection />
+        <SolutionSection />
+        <BenefitsSection />
+        <ProgressSection />
+        <FinalCTA />
+      </main>
       <Footer />
     </div>
   );
