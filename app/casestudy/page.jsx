@@ -9,6 +9,7 @@ const assistant = Assistant({
 });
 
 export const metadata = {
+  robots: { index: false, follow: false },
   title: {
     absolute: 'Logym Case Study - From Product to Promise',
   },

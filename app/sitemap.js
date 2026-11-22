@@ -17,7 +17,6 @@ export default function sitemap() {
 
   return [
     { url: `${SITE_URL}/`, lastModified: MARKETING_UPDATED },
-    { url: `${SITE_URL}/casestudy`, lastModified: MARKETING_UPDATED },
     { url: `${SITE_URL}/blog`, lastModified: blogUpdated },
     ...LEGAL_PATHS.map((path) => ({
       url: `${SITE_URL}${path}`,

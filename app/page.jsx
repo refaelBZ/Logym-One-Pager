@@ -13,9 +13,6 @@ const title = "Logym - Stop Checking Boxes. Start Seeing Results.";
 const description = "The only fitness app with a revolutionary interface for logging workouts in seconds. Focus on what truly matters – your progress.";
 
 export const metadata = {
-  alternates: {
-    canonical: `${SITE_URL}/`,
-  },
   openGraph: {
     type: "website",
     url: `${SITE_URL}/`,
@@ -41,6 +38,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div className={styles.page}>
+      <link rel="canonical" href={`${SITE_URL}/`} />
       <Hero />
       <ProblemSection />
       <SolutionSection />
