@@ -22,6 +22,8 @@ export default function Footer() {
         <span className={styles.separator}>|</span>
         <Link href="/contact" className={styles.link}>Contact</Link>
         <span className={styles.separator}>|</span>
+        <Link href="/image-license" className={styles.link}>Image license</Link>
+        <span className={styles.separator}>|</span>
         <Link href="/blog/rss.xml" className={styles.link}>RSS</Link>
       </div>
     </footer>

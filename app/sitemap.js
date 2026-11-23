@@ -9,6 +9,7 @@ const LEGAL_PATHS = [
   '/health',
   '/accessibility',
   '/contact',
+  '/image-license',
 ];
 
 export default function sitemap() {
