@@ -74,6 +74,15 @@ export default function ArticleLayout({ post, author }) {
       </div>
       {showFaq ? <Faq items={post.faq} /> : null}
       {sourceIncludesCta(post.content) ? null : <CtaBlock />}
+      <aside className={styles.tools} aria-labelledby="free-tools">
+        <h2 id="free-tools" className={styles.toolsTitle}>Free tools</h2>
+        <ul className={styles.toolsList}>
+          <li><Link href="/tools">All tools</Link></li>
+          <li><Link href="/tools/1rm-calculator">1RM calculator</Link></li>
+          <li><Link href="/tools/plate-calculator">Plate calculator</Link></li>
+          <li><Link href="/tools/workout-templates">Workout templates</Link></li>
+        </ul>
+      </aside>
       <p className={styles.disclaimer}>
         This is educational training content, not medical advice.
       </p>
