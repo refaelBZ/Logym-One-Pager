@@ -1,6 +1,7 @@
 import { getAllAuthors, getPublishedPosts } from '@/lib/blog';
 import { LEGAL_UPDATED } from '@/lib/legal';
 import { BLOG_UPDATED, MARKETING_UPDATED, SITE_URL } from '@/lib/site';
+import { TOOLS, TOOLS_UPDATED } from '@/lib/tools/catalog';
 
 const LEGAL_PATHS = [
   '/terms',
@@ -19,6 +20,11 @@ export default function sitemap() {
   return [
     { url: `${SITE_URL}/`, lastModified: MARKETING_UPDATED },
     { url: `${SITE_URL}/blog`, lastModified: blogUpdated },
+    { url: `${SITE_URL}/tools`, lastModified: TOOLS_UPDATED },
+    ...TOOLS.map((tool) => ({
+      url: `${SITE_URL}/tools/${tool.slug}`,
+      lastModified: TOOLS_UPDATED,
+    })),
     ...LEGAL_PATHS.map((path) => ({
       url: `${SITE_URL}${path}`,
       lastModified: LEGAL_UPDATED,

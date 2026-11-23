@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest run"
   },
   "dependencies": {
     "@fontsource/assistant": "^5.2.7",
@@ -23,5 +24,10 @@
     "remark-gfm": "^4.0.1",
     "sass": "^1.89.2",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^15.4.10",
+    "vitest": "^5.1.1"
   }
 }

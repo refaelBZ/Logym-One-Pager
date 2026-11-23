@@ -16,6 +16,9 @@ export default function SiteHeader({ variant = 'site', current }) {
         <Link className={styles.link} href="/blog" aria-current={current === 'blog' ? 'page' : undefined}>
           Blog
         </Link>
+        <Link className={styles.link} href="/tools" aria-current={current === 'tools' ? 'page' : undefined}>
+          Tools
+        </Link>
         {variant === 'site' ? (
           <AppCtaLink className={styles.cta} location={CTA_LOCATION.header}>
             Log a workout

@@ -10,6 +10,8 @@ export default function Footer() {
       <div className={styles.links}>
         <Link href="/blog" className={styles.link}>Blog</Link>
         <span className={styles.separator}>|</span>
+        <Link href="/tools" className={styles.link}>Tools</Link>
+        <span className={styles.separator}>|</span>
         <Link href="/privacy" className={styles.link}>Privacy Policy</Link>
         <span className={styles.separator}>|</span>
         <Link href="/terms" className={styles.link}>Terms of Service</Link>
