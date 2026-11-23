@@ -21,7 +21,7 @@ export const metadata = {
     default: "Logym - Stop Checking Boxes. Start Seeing Results.",
     template: "%s | Logym",
   },
-  description: "The only fitness app with a revolutionary interface for logging workouts in seconds. Focus on what truly matters – your progress.",
+  description: "Logym is a workout tracker with a single workout screen: log every set in seconds and see your progress over time.",
   icons: {
     icon: '/logym.svg',
     shortcut: '/logym.svg',

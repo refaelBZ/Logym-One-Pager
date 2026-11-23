@@ -33,11 +33,8 @@ export default function Hero() {
           <h1 className={`${styles.title} animate-on-scroll`} data-stagger="0">
             STOP CHECKING BOXES. <span className={styles.highlight}>START SEEING RESULTS.</span>
           </h1>
-          <h2 className={`${styles.subtitle} animate-on-scroll`} data-stagger="1">
-            Logym is the only fitness app with a revolutionary interface for logging workouts in seconds.
-          </h2>
-          <p className={`${styles.description} animate-on-scroll`} data-stagger="2">
-            Everything you need to focus on what truly matters – your progress.
+          <p className={`${styles.subtitle} animate-on-scroll`} data-stagger="1">
+            Logym is a workout tracker with a single workout screen: log every set in seconds and see your progress over time.
           </p>
           <Button 
             href={appCtaUrl(pathname)}

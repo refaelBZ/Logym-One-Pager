@@ -10,9 +10,10 @@ import Workout from "./components/Workout";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 const title = "Logym - Stop Checking Boxes. Start Seeing Results.";
-const description = "The only fitness app with a revolutionary interface for logging workouts in seconds. Focus on what truly matters – your progress.";
+const description = "Logym is a workout tracker with a single workout screen: log every set in seconds and see your progress over time.";
 
 export const metadata = {
+  description,
   openGraph: {
     type: "website",
     url: `${SITE_URL}/`,
